@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Permisos y Vehículos | Autoescuela Tellado</title>
+    <meta name="description" content="Descubre todos los permisos de conducir que ofrecemos: AM, A1, A2, A y B en modalidad manual y automático. También CAP continuo y recuperación de puntos.">
+    <meta name="keywords" content="permisos de conducir, permiso B, permiso A, moto, coche, automático, manual, CAP continuo, recuperación de puntos">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sections/permisos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logotellado.webp" alt="Autoescuela Tellado" class="logo-img">
+                    <span class="logo-text">Autoescuela<span class="logo-highlight">Tellado</span></span>
+                </a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="../index.html#sedes" class="nav-link">Nuestras Sedes</a></li>
+                    <li class="nav-item"><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link">Cursos</a></li>
+                    <li class="nav-item"><a href="permisos.html" class="nav-link active">Permisos</a></li>
+                    <li class="nav-item"><a href="../index.html#testimonios" class="nav-link">Testimonios</a></li>
+                    <li class="nav-item">
+                        <a href="../index.html#contacto" class="btn btn-primary btn-sm">
+                            <i class="fas fa-phone"></i> Contactanos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section para página de permisos -->
+    <section class="page-hero licenses-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title">Nuestros <span class="highlight">Permisos</span></h1>
+                <p class="page-hero-subtitle">Ofrecemos formación para AM, A1, A2, A y B en modalidad manual y automático. También CAP continuo y recuperación de puntos.</p>
+                <div class="page-hero-cta">
+                    <a href="#permisos" class="btn btn-primary btn-lg">
+                        <i class="fas fa-id-card"></i> Ver permisos
+                    </a>
+                    <a href="#vehiculos" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-car"></i> Ver vehículos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Permisos -->
+<section class="licenses-section" id="permisos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Tipos de Permisos</h2>
+            <p class="section-subtitle">AM, A1, A2, A y B - Manual y Automático</p>
+        </div>
+        
+        <!-- Filtro de Permisos -->
+        <div class="licenses-filter">
+            <div class="filter-header">
+                <button class="filter-btn active" data-filter="todos">
+                    <i class="fas fa-th"></i> Todos
+                </button>
+                <button class="filter-btn" data-filter="coches">
+                    <i class="fas fa-car"></i> Coches
+                </button>
+                <button class="filter-btn" data-filter="motos">
+                    <i class="fas fa-motorcycle"></i> Motos
+                </button>
+                <button class="filter-btn" data-filter="ciclomotores">
+                    <i class="fas fa-bicycle"></i> Ciclomotores
+                </button>
+                <button class="filter-btn" data-filter="profesionales">
+                    <i class="fas fa-briefcase"></i> Profesionales
+                </button>
+                <button class="filter-btn" data-filter="especiales">
+                    <i class="fas fa-star"></i> Especiales
+                </button>
+            </div>
+        </div>
+        
+        <div class="licenses-grid">
+            <!-- Permiso B Manual -->
+            <div class="license-card featured" data-category="coches">
+                <div class="license-badge">Más Demandado</div>
+                <div class="license-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Permiso B Manual</h3>
+                    <p class="license-subtitle">Turismos y vehículos similares con cambio manual</p>
+                    <div class="license-details">
+                        <p class="license-description">Autoriza para conducir turismos, furgonetas hasta 3.500 kg y vehículos de hasta 9 plazas incluido el conductor con cambio manual.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Edad mínima</span>
+                                    <span class="info-value">18 años</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración media</span>
+                                    <span class="info-value">2-3 meses</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-road"></i>
+                                <div>
+                                    <span class="info-label">Prácticas mínimas</span>
+                                    <span class="info-value">15 horas</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <span class="info-label">Tipo de cambio</span>
+                                    <span class="info-value">Manual</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Incluye:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Turismos manuales</li>
+                                <li><i class="fas fa-check"></i> Furgonetas ligeras</li>
+                                <li><i class="fas fa-check"></i> Vehículos de hasta 9 plazas</li>
+                                <li><i class="fas fa-check"></i> Motos hasta 125cc (con 3 años de antigüedad del permiso B)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#permiso-b-manual" class="btn btn-primary btn-block">Ver cursos para B Manual</a>
+                </div>
+            </div>
+
+            <!-- Permiso B Automático -->
+            <div class="license-card" data-category="coches">
+                <div class="license-badge">Novedad</div>
+                <div class="license-icon">
+                    <i class="fas fa-car-side"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Permiso B Automático</h3>
+                    <p class="license-subtitle">Turismos y vehículos similares con cambio automático</p>
+                    <div class="license-details">
+                        <p class="license-description">Para conducir turismos y vehículos similares exclusivamente con cambio automático. Examen más sencillo y adaptado a vehículos modernos.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Edad mínima</span>
+                                    <span class="info-value">18 años</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración media</span>
+                                    <span class="info-value">1-2 meses</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-road"></i>
+                                <div>
+                                    <span class="info-label">Prácticas mínimas</span>
+                                    <span class="info-value">15 horas</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-cogs"></i>
+                                <div>
+                                    <span class="info-label">Tipo de cambio</span>
+                                    <span class="info-value">Automático</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Ventajas:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Examen más sencillo</li>
+                                <li><i class="fas fa-check"></i> Adaptado a vehículos eléctricos</li>
+                                <li><i class="fas fa-check"></i> Menos estrés en ciudad</li>
+                                <li><i class="fas fa-check"></i> Ideal para conducción urbana</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#permiso-b-automatico" class="btn btn-primary btn-block">Ver cursos para B Automático</a>
+                </div>
+            </div>
+
+            <!-- Permiso A1 -->
+            <div class="license-card" data-category="motos">
+                <div class="license-icon">
+                    <i class="fas fa-motorcycle"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Permiso A1</h3>
+                    <p class="license-subtitle">Motocicletas ligeras hasta 125cc</p>
+                    <div class="license-details">
+                        <p class="license-description">Para motocicletas con cilindrada hasta 125 cm³, potencia máxima de 11 kW y relación potencia/peso de 0,1 kW/kg.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Edad mínima</span>
+                                    <span class="info-value">16 años</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración media</span>
+                                    <span class="info-value">1-2 meses</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <span class="info-label">Potencia máxima</span>
+                                    <span class="info-value">11 kW (15 CV)</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <span class="info-label">Cilindrada</span>
+                                    <span class="info-value">Hasta 125 cc</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Incluye:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Motocicletas ligeras</li>
+                                <li><i class="fas fa-check"></i> Triciclos hasta 15 kW</li>
+                                <li><i class="fas fa-check"></i> Cuadriciclos ligeros</li>
+                                <li><i class="fas fa-check"></i> Motos eléctricas equivalentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#permiso-a1" class="btn btn-primary btn-block">Ver cursos para A1</a>
+                </div>
+            </div>
+
+            <!-- Permiso A2 -->
+            <div class="license-card" data-category="motos">
+                <div class="license-icon">
+                    <i class="fas fa-motorcycle"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Permiso A2</h3>
+                    <p class="license-subtitle">Motocicletas de potencia media</p>
+                    <div class="license-details">
+                        <p class="license-description">Para motocicletas con potencia máxima de 35 kW (47,5 CV) y relación potencia/peso máxima de 0,2 kW/kg. No derivadas de vehículo de más del doble de potencia.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Edad mínima</span>
+                                    <span class="info-value">18 años</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración media</span>
+                                    <span class="info-value">2-3 meses</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <span class="info-label">Potencia máxima</span>
+                                    <span class="info-value">35 kW (47,5 CV)</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-balance-scale"></i>
+                                <div>
+                                    <span class="info-label">Relación P/P</span>
+                                    <span class="info-value">0,2 kW/kg</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Incluye:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Motocicletas de potencia media</li>
+                                <li><i class="fas fa-check"></i> Triciclos de cualquier potencia</li>
+                                <li><i class="fas fa-check"></i> Permiso A1 incluido</li>
+                                <li><i class="fas fa-check"></i> Acceso a permiso A a los 20 años (con 2 años de antigüedad)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#permiso-a2" class="btn btn-primary btn-block">Ver cursos para A2</a>
+                </div>
+            </div>
+
+            <!-- Permiso A -->
+            <div class="license-card" data-category="motos">
+                <div class="license-badge">Completo</div>
+                <div class="license-icon">
+                    <i class="fas fa-motorcycle"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Permiso A</h3>
+                    <p class="license-subtitle">Motocicletas sin límite de potencia</p>
+                    <div class="license-details">
+                        <p class="license-description">Para conducir cualquier motocicleta, triciclo o cuadriciclo de motor sin limitaciones de potencia o cilindrada.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Edad mínima</span>
+                                    <span class="info-value">20 años*</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración media</span>
+                                    <span class="info-value">1-2 meses</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-bolt"></i>
+                                <div>
+                                    <span class="info-label">Potencia</span>
+                                    <span class="info-value">Sin límite</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <span class="info-label">Cilindrada</span>
+                                    <span class="info-value">Sin límite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Acceso directo:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> 20 años con 2 años de antigüedad en A2</li>
+                                <li><i class="fas fa-check"></i> 21 años sin permiso previo (pruebas específicas)</li>
+                                <li><i class="fas fa-check"></i> 24 años acceso directo sin requisitos</li>
+                            </ul>
+                            <h4>Incluye:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Todas las motocicletas</li>
+                                <li><i class="fas fa-check"></i> Triciclos y cuadriciclos</li>
+                                <li><i class="fas fa-check"></i> Permisos A2 y A1 incluidos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#permiso-a" class="btn btn-primary btn-block">Ver cursos para A</a>
+                </div>
+            </div>
+
+            <!-- Permiso AM -->
+            <div class="license-card" data-category="ciclomotores">
+                <div class="license-icon">
+                    <i class="fas fa-bicycle"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Permiso AM</h3>
+                    <p class="license-subtitle">Ciclomotores y vehículos ligeros</p>
+                    <div class="license-details">
+                        <p class="license-description">Para ciclomotores de dos o tres ruedas y cuadriciclos ligeros con velocidad máxima de 45 km/h. Incluye scooters eléctricos.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Edad mínima</span>
+                                    <span class="info-value">15 años</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración media</span>
+                                    <span class="info-value">1 mes</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-tachometer-alt"></i>
+                                <div>
+                                    <span class="info-label">Cilindrada</span>
+                                    <span class="info-value">Hasta 50 cc</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-speedometer"></i>
+                                <div>
+                                    <span class="info-label">Velocidad máxima</span>
+                                    <span class="info-value">45 km/h</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Incluye:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Ciclomotores 2/3 ruedas</li>
+                                <li><i class="fas fa-check"></i> Cuadriciclos ligeros</li>
+                                <li><i class="fas fa-check"></i> Scooters eléctricos equivalentes</li>
+                                <li><i class="fas fa-check"></i> Vehículos para personas con movilidad reducida</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#permiso-am" class="btn btn-primary btn-block">Ver cursos para AM</a>
+                </div>
+            </div>
+
+            <!-- CAP Continuo -->
+            <div class="license-card" data-category="profesionales">
+                <div class="license-badge">Profesional</div>
+                <div class="license-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">CAP Continuo</h3>
+                    <p class="license-subtitle">Formación continua para profesionales</p>
+                    <div class="license-details">
+                        <p class="license-description">Formación obligatoria para conductores profesionales que ya poseen el Certificado de Aptitud Profesional. Cursos de 35 horas cada 5 años.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Requisito</span>
+                                    <span class="info-value">CAP Inicial</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración</span>
+                                    <span class="info-value">35 horas</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-alt"></i>
+                                <div>
+                                    <span class="info-label">Periodicidad</span>
+                                    <span class="info-value">Cada 5 años</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-id-card"></i>
+                                <div>
+                                    <span class="info-label">Obligatorio</span>
+                                    <span class="info-value">Sí, para profesionales</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Contenido:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Actualización normativa</li>
+                                <li><i class="fas fa-check"></i> Seguridad vial</li>
+                                <li><i class="fas fa-check"></i> Salud y conducción</li>
+                                <li><i class="fas fa-check"></i> Medio ambiente</li>
+                                <li><i class="fas fa-check"></i> Servicio y logística</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#cap-continuo" class="btn btn-primary btn-block">Ver cursos CAP</a>
+                </div>
+            </div>
+
+            <!-- Recuperación de Puntos -->
+            <div class="license-card" data-category="especiales">
+                <div class="license-badge">Rehabilitación</div>
+                <div class="license-icon">
+                    <i class="fas fa-redo"></i>
+                </div>
+                <div class="license-content">
+                    <h3 class="license-title">Recuperación de Puntos</h3>
+                    <p class="license-subtitle">Cursos de sensibilización y reeducación vial</p>
+                    <div class="license-details">
+                        <p class="license-description">Cursos para recuperar hasta 8 puntos del carnet de conducir. Obligatorios cuando se ha perdido todos los puntos o se quiere recuperar saldo.</p>
+                        <div class="license-info">
+                            <div class="info-item">
+                                <i class="fas fa-users"></i>
+                                <div>
+                                    <span class="info-label">Dirigido a</span>
+                                    <span class="info-value">Todos los conductores</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-clock"></i>
+                                <div>
+                                    <span class="info-label">Duración</span>
+                                    <span class="info-value">12-24 horas</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-star"></i>
+                                <div>
+                                    <span class="info-label">Puntos a recuperar</span>
+                                    <span class="info-value">Hasta 8 puntos</span>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-calendar-check"></i>
+                                <div>
+                                    <span class="info-label">Periodicidad</span>
+                                    <span class="info-value">Cada 2 años</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="license-includes">
+                            <h4>Tipos de cursos:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Curso de 12 horas (recupera 6 puntos)</li>
+                                <li><i class="fas fa-check"></i> Curso de 24 horas (recupera 8 puntos)</li>
+                                <li><i class="fas fa-check"></i> Curso para pérdida total de puntos</li>
+                                <li><i class="fas fa-check"></i> Cursos específicos por infracciones</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="license-footer">
+                    <a href="cursos.html#recuperacion-puntos" class="btn btn-primary btn-block">Información cursos</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Sección de Vehículos -->
+    <section class="vehicles-section" id="vehiculos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Flota de Vehículos</h2>
+                <p class="section-subtitle">Vehículos modernos separados por modalidad: manual y automático</p>
+            </div>
+            
+            <div class="vehicles-tabs">
+                <div class="tabs-header">
+                    <button class="tab-btn active" data-tab="manual">
+                        <i class="fas fa-cogs"></i> Manuales
+                    </button>
+                    <button class="tab-btn" data-tab="automatico">
+                        <i class="fas fa-bolt"></i> Automáticos
+                    </button>
+                    <button class="tab-btn" data-tab="motos">
+                        <i class="fas fa-motorcycle"></i> Motos
+                    </button>
+                </div>
+                
+                <div class="tabs-content">
+                    <!-- Pestaña Manual -->
+                    <div class="tab-pane active" id="manual">
+                        <div class="vehicles-grid">
+                            <div class="vehicle-card">
+                                <div class="vehicle-image">
+                                    <image class="foto-vehiculo" src="../images/vehiculos/VolkswagenGolfMk7.webp" alt="Volkswagen Golf Mk7">
+                                </div>
+                                <div class="vehicle-content">
+                                    <h3 class="vehicle-title">Volkswagen Golf (Generación Mk7)</h3>
+                                    <div class="vehicle-specs">
+                                        <div class="spec-item">
+                                            <i class="fas fa-gas-pump"></i>
+                                            <span>Gasolina</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-cogs"></i>
+                                            <span>Manual 6v</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2017</span>
+                                        </div>
+                                    </div>
+                                    <p class="vehicle-description">Motor diésel de gran respuesta en bajas revoluciones. Incluye sensores de aparcamiento y sistema de ayuda de salida en pendiente (Auto-Hold).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="vehicle-card">
+                                <div class="vehicle-image">
+                                    <image class="foto-vehiculo" src="../images/vehiculos/NissanMicraK13.jpg" alt="Nissan Micra K13">
+                                </div>
+                                <div class="vehicle-content">
+                                    <h3 class="vehicle-title">Nissan Micra (Generación K13)</h3>
+                                    <div class="vehicle-specs">
+                                        <div class="spec-item">
+                                            <i class="fas fa-gas-pump"></i>
+                                            <span>Gasolina</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-cogs"></i>
+                                            <span>Manual 5v</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2017</span>
+                                        </div>
+                                    </div>
+                                    <p class="vehicle-description">Utilitario compacto con radio de giro ultra reducido. Equipado con dirección asistida eléctrica para facilitar maniobras de estacionamiento.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pestaña Automático -->
+                    <div class="tab-pane" id="automatico">
+                        <div class="vehicles-grid">
+                            <div class="vehicle-card">
+                                <div class="vehicle-image">
+                                    <image class="foto-vehiculo" src="../images/vehiculos/VolkswagenT-Roc.jpg" alt="Volkswagen T-Roc">
+                                </div>
+                                <div class="vehicle-content">
+                                    <h3 class="vehicle-title">Volkswagen T-Roc</h3>
+                                    <div class="vehicle-specs">
+                                        <div class="spec-item">
+                                            <i class="fas fa-gas-pump"></i>
+                                            <span>Diésel</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-bolt"></i>
+                                            <span>Automático DSG</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2023</span>
+                                        </div>
+                                    </div>
+                                    <p class="vehicle-description">SUV con posición de conducción elevada. Con asistente de mantenimiento de carril y frenado automático de emergencia.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Pestaña Motos -->
+                    <div class="tab-pane" id="motos">
+                        <div class="vehicles-grid">
+                            <div class="vehicle-card">
+                                <div class="vehicle-image">
+                                    <image class="foto-vehiculo" src="../images/vehiculos/HondaCB500F.jpg" alt="Honda CB500F"></image>
+                                </div>
+                                <div class="vehicle-content">
+                                    <h3 class="vehicle-title">Honda CB500F</h3>
+                                    <div class="vehicle-specs">
+                                        <div class="spec-item">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            <span>124 cc</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-bolt"></i>
+                                            <span>47 CV (35 kW)</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2018</span>
+                                        </div>
+                                    </div>
+                                    <p class="vehicle-description">Moto tipo "Naked" apta para el carnet A2. Equipada con frenos ABS de doble canal y embrague asistido antirrebote.</p>
+                                </div>
+                            </div>
+                             <div class="vehicle-card">
+                                <div class="vehicle-image">
+                                    <image class="foto-vehiculo" src="../images/vehiculos/YamahaMT-07.jpg" alt="Yamaha MT-07"></image>
+                                </div>
+                                <div class="vehicle-content">
+                                    <h3 class="vehicle-title">Yamaha MT-07</h3>
+                                    <div class="vehicle-specs">
+                                        <div class="spec-item">
+                                            <i class="fas fa-tachometer-alt"></i>
+                                            <span>124 cc</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-bolt"></i>
+                                            <span>74 CV (54 kW)</span>
+                                        </div>
+                                        <div class="spec-item">
+                                            <i class="fas fa-calendar-alt"></i>
+                                            <span>2021</span>
+                                        </div>
+                                    </div>
+                                    <p class="vehicle-description">Es ideal para aprender el manejo de una moto de "tamaño real" debido a su entrega de potencia progresiva y su chasis compacto que facilita las maniobras.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Servicios Adicionales -->
+    <section class="additional-services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Servicios Adicionales</h2>
+                <p class="section-subtitle">Más allá de los permisos básicos</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3 class="service-title">Clases Teóricas Presenciales y Online</h3>
+                    <p class="service-description">Grupos reducidos, horarios flexibles y plataforma online con test ilimitados. Profesores disponibles para resolver dudas.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="service-title">Gestión de Trámites</h3>
+                    <p class="service-description">Nos encargamos de toda la papeleta: solicitudes, citas, presentación de documentación y seguimiento del expediente.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car-crash"></i>
+                    </div>
+                    <h3 class="service-title">Seguros a Todo Riesgo</h3>
+                    <p class="service-description">Todos nuestros vehículos tienen seguro a todo riesgo sin franquicia. Conduces tranquilo, nosotros nos encargamos del resto.</p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿Manual o Automático? ¿Qué permiso necesitas?</h2>
+                <p class="cta-subtitle">Nuestros asesores te orientarán gratis para que elijas la mejor opción según tus necesidades y objetivos.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-comments"></i> Asesoramiento gratuito
+                    </a>
+                    <a href="tel:+34634792863" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i> Llámanos: 634 79 28 63
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="../index.html" class="logo footer-logo">
+                        <img src="../images/logotellado.webp" alt="Autoescuela Tellado" class="logo-img">
+                        <span class="logo-text">Autoescuela<span class="logo-highlight">Tellado</span></span>
+                    </a>
+                    <p class="footer-description">Especialistas en permisos AM, A1, A2, A y B (manual y automático). CAP continuo y recuperación de puntos.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Permisos</h3>
+                    <ul class="footer-links">
+                        <li><a href="permisos.html#permiso-b-manual">B Manual</a></li>
+                        <li><a href="permisos.html#permiso-b-automatico">B Automático</a></li>
+                        <li><a href="permisos.html#permiso-a">Permiso A</a></li>
+                        <li><a href="permisos.html#permiso-a2">Permiso A2</a></li>
+                        <li><a href="permisos.html#permiso-a1">Permiso A1</a></li>
+                        <li><a href="permisos.html#permiso-am">Permiso AM</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Servicios</h3>
+                    <ul class="footer-links">
+                        <li><a href="cursos.html#cap-continuo">CAP Continuo</a></li>
+                        <li><a href="cursos.html#recuperacion-puntos">Recuperación de Puntos</a></li>
+                        <li><a href="cursos.html">Cursos Especiales</a></li>
+                        <li><a href="contacto.html">Gestión de Trámites</a></li>
+                        <li><a href="contacto.html">Reconocimientos Médicos</a></li>
+                        <li><a href="contacto.html">Pruebas Libres</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Carrer Cervantes, 49, 03570 La Vila Joiosa, Alicante</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. de Finestrat, 11, 13, 03509 Benidorm, Alicante</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+34634792863">+34 634 79 28 63<br>Tellado Finestrat</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="tel:+34682290092">+34 682 29 00 92<br>Tellado Villajoyosa</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:info@autoescuelatellado.com">info@autoescuelatellado.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2023 Autoescuela Tellado. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botón flotante WhatsApp -->
+        <a href="https://wa.me/34634792863?text=Hola,%20me%20interesa%20información%20sobre%20los%20permisos%20de%20conducir" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/permisos.js"></script>
+</body>
+</html>

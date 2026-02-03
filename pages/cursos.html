@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos Nuestros Cursos | Autoescuela Rápido y Seguro</title>
+    <meta name="description" content="Descubre todos nuestros cursos de conducción. Desde el permiso B hasta cursos de perfeccionamiento. La mejor formación al mejor precio.">
+    <meta name="keywords" content="cursos de conducir, autoescuela, permiso B, permiso A, intensivo, prácticas">
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/sections/cursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Header/Navbar (igual que index.html) -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="../index.html" class="logo">
+                    <img src="../images/logotellado.webp" alt="Autoescuela Tellado" class="logo-img">
+                    <span class="logo-text">Autoescuela<span class="logo-highlight">Tellado</span></span>
+                </a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Inicio</a></li>
+                    <li class="nav-item"><a href="../index.html#sedes" class="nav-link">Nuestras Sedes</a></li>
+                    <li class="nav-item"><a href="sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a href="cursos.html" class="nav-link active">Cursos</a></li>
+                    <li class="nav-item"><a href="permisos.html" class="nav-link">Permisos</a></li>
+                    <li class="nav-item"><a href="../index.html#testimonios" class="nav-link">Testimonios</a></li>
+                    <li class="nav-item">
+                        <a href="../index.html#contacto" class="btn btn-primary btn-sm">
+                            <i class="fas fa-phone"></i> Contactanos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section para página de cursos -->
+    <section class="page-hero courses-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title">Nuestros <span class="highlight">Cursos</span></h1>
+                <p class="page-hero-subtitle">Elige la formación que mejor se adapte a tus necesidades. Todos nuestros cursos incluyen la mejor metodología y los instructores más cualificados.</p>
+                <div class="page-hero-cta">
+                    <a href="contacto.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Reserva tu primera clase
+                    </a>
+                    <a href="#cursos-list" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-arrow-down"></i> Ver todos los cursos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Filtros de Cursos -->
+    <section class="courses-filter-section">
+        <div class="container">
+            <div class="filter-header">
+                <h2 class="filter-title">Filtra por tipo de curso</h2>
+                <p class="filter-subtitle">Encuentra exactamente lo que necesitas</p>
+            </div>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Todos los cursos</button>
+                <button class="filter-btn" data-filter="permiso-b">Permiso B</button>
+                <button class="filter-btn" data-filter="permiso-a">Permiso A/Moto</button>
+                <button class="filter-btn" data-filter="intensivo">Cursos Intensivos</button>
+                <button class="filter-btn" data-filter="practicas">Prácticas</button>
+                <button class="filter-btn" data-filter="perfeccionamiento">Perfeccionamiento</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lista de Cursos -->
+    <section class="courses-list-section" id="cursos-list">
+        <div class="container">
+            <div class="courses-list-grid">
+                <!-- Curso 1 - Intensivo B -->
+                <div class="course-list-card" data-category="permiso-b intensivo">
+                    <div class="course-list-badge">Más Popular</div>
+                    <div class="course-list-header">
+                        <h3 class="course-list-title">Curso Intensivo Permiso B</h3>
+                        <div class="course-list-price">
+                            <span class="price">€699</span>
+                            <span class="price-note">Pago único</span>
+                        </div>
+                    </div>
+                    <div class="course-list-content">
+                        <p class="course-list-description">Obtén tu permiso B en el menor tiempo posible con nuestro curso intensivo. Ideal para quienes necesitan el carnet urgentemente.</p>
+                        <div class="course-list-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4-6 semanas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span>20h prácticas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Teoría ilimitada</span>
+                            </div>
+                        </div>
+                        <ul class="course-list-features">
+                            <li><i class="fas fa-check"></i> Clases teóricas presenciales y online</li>
+                            <li><i class="fas fa-check"></i> 20 horas de prácticas obligatorias</li>
+                            <li><i class="fas fa-check"></i> Simulacros de examen ilimitados</li>
+                            <li><i class="fas fa-check"></i> Tasas de examen incluidas</li>
+                            <li><i class="fas fa-check"></i> Material didáctico completo</li>
+                        </ul>
+                    </div>
+                    <div class="course-list-footer">
+                        <a href="contacto.html?curso=intensivo-b" class="btn btn-primary btn-block">Inscribirme ahora</a>
+                    </div>
+                </div>
+
+                <!-- Curso 2 - Estándar B -->
+                <div class="course-list-card featured" data-category="permiso-b">
+                    <div class="course-list-badge">Recomendado</div>
+                    <div class="course-list-header">
+                        <h3 class="course-list-title">Curso Estándar Permiso B</h3>
+                        <div class="course-list-price">
+                            <span class="price">€499</span>
+                            <span class="price-note">+ tasas de examen</span>
+                        </div>
+                    </div>
+                    <div class="course-list-content">
+                        <p class="course-list-description">La opción más equilibrada para obtener tu permiso de conducir con flexibilidad horaria y seguimiento personalizado.</p>
+                        <div class="course-list-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>8-10 semanas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span>15h prácticas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                <span>Teoría presencial</span>
+                            </div>
+                        </div>
+                        <ul class="course-list-features">
+                            <li><i class="fas fa-check"></i> Clases teóricas en grupos reducidos</li>
+                            <li><i class="fas fa-check"></i> 15 horas de prácticas básicas</li>
+                            <li><i class="fas fa-check"></i> Acceso a plataforma online</li>
+                            <li><i class="fas fa-check"></i> 2 simulacros de examen oficial</li>
+                            <li><i class="fas fa-check"></i> Libro de teoría y test</li>
+                        </ul>
+                    </div>
+                    <div class="course-list-footer">
+                        <a href="contacto.html?curso=estandar-b" class="btn btn-primary btn-block">Inscribirme ahora</a>
+                    </div>
+                </div>
+
+                <!-- Curso 3 - Intensivo A -->
+                <div class="course-list-card" data-category="permiso-a intensivo">
+                    <div class="course-list-header">
+                        <h3 class="course-list-title">Curso Intensivo Permiso A</h3>
+                        <div class="course-list-price">
+                            <span class="price">€799</span>
+                            <span class="price-note">Pago único</span>
+                        </div>
+                    </div>
+                    <div class="course-list-content">
+                        <p class="course-list-description">Obtén tu permiso de moto en tiempo récord con nuestro curso intensivo. Incluye prácticas en circuito y carretera.</p>
+                        <div class="course-list-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>4-5 semanas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-motorcycle"></i>
+                                <span>15h prácticas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-helmet-safety"></i>
+                                <span>Equipo incluido</span>
+                            </div>
+                        </div>
+                        <ul class="course-list-features">
+                            <li><i class="fas fa-check"></i> Motos de última generación</li>
+                            <li><i class="fas fa-check"></i> Equipo de protección completo</li>
+                            <li><i class="fas fa-check"></i> Prácticas en circuito propio</li>
+                            <li><i class="fas fa-check"></i> Tasas de examen incluidas</li>
+                            <li><i class="fas fa-check"></i> Seguro de responsabilidad civil</li>
+                        </ul>
+                    </div>
+                    <div class="course-list-footer">
+                        <a href="contacto.html?curso=intensivo-a" class="btn btn-primary btn-block">Inscribirme ahora</a>
+                    </div>
+                </div>
+
+                <!-- Curso 4 - Solo Prácticas B -->
+                <div class="course-list-card" data-category="permiso-b practicas">
+                    <div class="course-list-header">
+                        <h3 class="course-list-title">Solo Prácticas Permiso B</h3>
+                        <div class="course-list-price">
+                            <span class="price">€35</span>
+                            <span class="price-note">por hora</span>
+                        </div>
+                    </div>
+                    <div class="course-list-content">
+                        <p class="course-list-description">Para quienes solo necesitan clases prácticas o refuerzo. Flexibilidad total para programar tus horas.</p>
+                        <div class="course-list-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Flexible</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-car"></i>
+                                <span>Horas sueltas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-home"></i>
+                                <span>Recogida a domicilio</span>
+                            </div>
+                        </div>
+                        <ul class="course-list-features">
+                            <li><i class="fas fa-check"></i> Horas sueltas de práctica</li>
+                            <li><i class="fas fa-check"></i> Máxima flexibilidad horaria</li>
+                            <li><i class="fas fa-check"></i> Vehículo moderno y seguro</li>
+                            <li><i class="fas fa-check"></i> Instructor especializado</li>
+                            <li><i class="fas fa-check"></i> Recogida a domicilio incluida</li>
+                        </ul>
+                    </div>
+                    <div class="course-list-footer">
+                        <a href="contacto.html?curso=solo-practicas" class="btn btn-primary btn-block">Solicitar horas</a>
+                    </div>
+                </div>
+
+                <!-- Curso 5 - Perfeccionamiento -->
+                <div class="course-list-card" data-category="perfeccionamiento">
+                    <div class="course-list-header">
+                        <h3 class="course-list-title">Curso de Perfeccionamiento</h3>
+                        <div class="course-list-price">
+                            <span class="price">€299</span>
+                            <span class="price-note">Paquete 10h</span>
+                        </div>
+                    </div>
+                    <div class="course-list-content">
+                        <p class="course-list-description">Para conductores con experiencia que quieren mejorar su técnica, ganar confianza o actualizar conocimientos.</p>
+                        <div class="course-list-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>10 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>Defensiva</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-cloud-rain"></i>
+                                <span>Adversas</span>
+                            </div>
+                        </div>
+                        <ul class="course-list-features">
+                            <li><i class="fas fa-check"></i> Conducción defensiva avanzada</li>
+                            <li><i class="fas fa-check"></i> Técnicas de conducción eficiente</li>
+                            <li><i class="fas fa-check"></i> Conducción en condiciones adversas</li>
+                            <li><i class="fas fa-check"></i> Uso correcto de sistemas ADAS</li>
+                            <li><i class="fas fa-check"></i> Análisis de hábitos de conducción</li>
+                        </ul>
+                    </div>
+                    <div class="course-list-footer">
+                        <a href="contacto.html?curso=perfeccionamiento" class="btn btn-primary btn-block">Más información</a>
+                    </div>
+                </div>
+
+                <!-- Curso 6 - Reciclaje -->
+                <div class="course-list-card" data-category="perfeccionamiento">
+                    <div class="course-list-header">
+                        <h3 class="course-list-title">Curso de Reciclaje</h3>
+                        <div class="course-list-price">
+                            <span class="price">€199</span>
+                            <span class="price-note">Paquete 6h</span>
+                        </div>
+                    </div>
+                    <div class="course-list-content">
+                        <p class="course-list-description">Ideal para quienes llevan tiempo sin conducir y quieren recuperar la confianza al volante de forma segura.</p>
+                        <div class="course-list-details">
+                            <div class="detail-item">
+                                <i class="fas fa-clock"></i>
+                                <span>6 horas</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-user-graduate"></i>
+                                <span>Personalizado</span>
+                            </div>
+                            <div class="detail-item">
+                                <i class="fas fa-road"></i>
+                                <span>Ciudad/autovía</span>
+                            </div>
+                        </div>
+                        <ul class="course-list-features">
+                            <li><i class="fas fa-check"></i> Programa personalizado</li>
+                            <li><i class="fas fa-check"></i> Recuperación de confianza</li>
+                            <li><i class="fas fa-check"></i> Actualización normativa</li>
+                            <li><i class="fas fa-check"></i> Práctica en diferentes entornos</li>
+                            <li><i class="fas fa-check"></i> Técnicas de estacionamiento</li>
+                        </ul>
+                    </div>
+                    <div class="course-list-footer">
+                        <a href="contacto.html?curso=reciclaje" class="btn btn-primary btn-block">Recuperar confianza</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensaje si no hay cursos en el filtro -->
+            <div class="no-courses-message" style="display: none;">
+                <div class="no-courses-content">
+                    <i class="fas fa-search"></i>
+                    <h3>No hay cursos con ese filtro</h3>
+                    <p>Intenta con otra categoría o <a href="contacto.html">contáctanos</a> para información personalizada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de FAQ -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">Resolvemos tus dudas sobre nuestros cursos</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Puedo pagar el curso a plazos?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos facilidades de pago en todos nuestros cursos. Puedes pagar en 2-3 plazos sin intereses. Consulta las condiciones específicas de cada curso.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué incluye exactamente el precio del curso?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Los cursos incluyen: clases teóricas, prácticas, material didáctico, uso de vehículo/moto, seguro y seguimiento personalizado. Algunos incluyen tasas de examen.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Ofrecéis clases los fines de semana?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, ofrecemos clases los sábados de 9:00 a 14:00. Las clases intensivas también pueden incluir horarios de fin de semana según disponibilidad.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>¿Qué pasa si no apruebo el examen?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ofrecemos clases de refuerzo gratuitas y te preparamos para la siguiente convocatoria. Consulta nuestras condiciones de repesca según el curso contratado.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">¿No encuentras lo que buscas?</h2>
+                <p class="cta-subtitle">Contáctanos y crearemos un plan de formación personalizado para ti.</p>
+                <div class="cta-buttons">
+                    <a href="contacto.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-envelope"></i> Contactar ahora
+                    </a>
+                    <a href="tel:+34123456789" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-phone"></i> Llamar para asesoramiento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (igual que index.html) -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="../index.html" class="logo footer-logo">
+                        <img src="../images/logotellado.webp" alt="Autoescuela Tellado" class="logo-img">
+                        <span class="logo-text">Autoescuela<span class="logo-highlight">Tellado</span></span>
+                    </a>
+                    <p class="footer-description">Más de 20 años formando conductores responsables con la mejor metodología y los instructores más cualificados.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="permisos.html">Permisos</a></li>
+                        <li><a href="cursos.html">Cursos</a></li>
+                        <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="precios.html">Precios</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Carrer Cervantes, 49, 03570 La Vila Joiosa, Alicante, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. de Finestrat, 11, 13, 03509 Benidorm, Alicante, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="">+34 634 79 28 63<br>Tellado Finestrat</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="">+34 682 29 00 92<br>Tellado Villajoyosa</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:info@autoescuelatellado.com">info@autoescuelatellado.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Horario</h3>
+                    <ul class="footer-hours">
+                        <li>
+                            <span>Lunes  Viernes</span>
+                            <span>10:00  14:00</span>
+                            <span>16:00  20:00</span>
+                        </li>
+                        <li>
+                            <span>Sábados</span>
+                            <span>Cerrado</span>
+                        </li>
+                        <li>
+                            <span>Domingos</span>
+                            <span>Cerrado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2023 Autoescuela Rápido y Seguro. Todos los derechos reservados.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Aviso Legal</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Botón flotante WhatsApp -->
+        <a href="https://wa.me/34123456789?text=Hola,%20me%20interesa%20información%20sobre%20los%20cursos%20de%20conducción" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../js/main.js"></script>
+    <script src="../js/pages.js"></script>
+    <script>
+        // Script específico para la página de cursos
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filtrado de cursos
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-list-card');
+            const noCoursesMessage = document.querySelector('.no-courses-message');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remover clase active de todos los botones
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    // Agregar clase active al botón clickeado
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Mostrar/ocultar cursos según filtro
+                    let visibleCourses = 0;
+                    
+                    courseCards.forEach(card => {
+                        const categories = card.getAttribute('data-category').split(' ');
+                        
+                        if (filterValue === 'all' || categories.includes(filterValue)) {
+                            card.style.display = 'block';
+                            setTimeout(() => {
+                                card.style.opacity = '1';
+                                card.style.transform = 'translateY(0)';
+                            }, 10);
+                            visibleCourses++;
+                        } else {
+                            card.style.opacity = '0';
+                            card.style.transform = 'translateY(20px)';
+                            setTimeout(() => {
+                                card.style.display = 'none';
+                            }, 300);
+                        }
+                    });
+                    
+                    // Mostrar mensaje si no hay cursos
+                    if (visibleCourses === 0) {
+                        noCoursesMessage.style.display = 'block';
+                        setTimeout(() => {
+                            noCoursesMessage.style.opacity = '1';
+                        }, 10);
+                    } else {
+                        noCoursesMessage.style.opacity = '0';
+                        setTimeout(() => {
+                            noCoursesMessage.style.display = 'none';
+                        }, 300);
+                    }
+                });
+            });
+
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const faqItem = this.parentElement;
+                    const answer = this.nextElementSibling;
+                    const icon = this.querySelector('i');
+                    
+                    // Cerrar otros items abiertos
+                    document.querySelectorAll('.faq-item').forEach(item => {
+                        if (item !== faqItem && item.classList.contains('active')) {
+                            item.classList.remove('active');
+                            item.querySelector('.faq-answer').style.maxHeight = null;
+                            item.querySelector('.faq-question i').style.transform = 'rotate(0deg)';
+                        }
+                    });
+                    
+                    // Alternar item actual
+                    faqItem.classList.toggle('active');
+                    
+                    if (faqItem.classList.contains('active')) {
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                        icon.style.transform = 'rotate(180deg)';
+                    } else {
+                        answer.style.maxHeight = null;
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                });
+            });
+
+            // Pre-llenar formulario si viene con parámetro de curso
+            const urlParams = new URLSearchParams(window.location.search);
+            const cursoParam = urlParams.get('curso');
+            if (cursoParam) {
+                // Guardar para cuando se redirija a contacto
+                sessionStorage.setItem('cursoInteres', cursoParam);
+            }
+        });
+    </script>
+</body>
+</html>

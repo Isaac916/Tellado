@@ -1,0 +1,141 @@
+/* Sección Sedes */
+.locations-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--light-color);
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-card {
+    background-color: white;
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.location-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--location-badge-height);
+}
+
+.location-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.location-badge {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.location-content {
+    padding: var(--spacing-lg);
+}
+
+.location-address {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-light);
+    align-items: flex-start;
+}
+
+.location-address i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.location-address div {
+    flex-grow: 1;
+}
+
+.location-contact {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.location-contact p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.location-contact i {
+    color: var(--primary-color);
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.location-contact a {
+    color: var(--dark-color);
+    transition: color 0.3s ease;
+    word-break: break-all;
+}
+
+.location-contact a:hover {
+    color: var(--primary-color);
+}
+
+.location-hours h4,
+.location-features h4 {
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+.location-hours p {
+    margin: 0.25rem 0;
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+.location-features ul {
+    margin: 0;
+    padding: 0;
+}
+
+.location-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+.location-features i {
+    color: var(--success-color);
+    flex-shrink: 0;
+}

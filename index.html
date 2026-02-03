@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescuela Tellado | Clases de Conducción Profesional</title>
+    <meta name="description" content="Autoescuela profesional con los mejores instructores. Aprende a conducir rápido y seguro. Clases teóricas y prácticas.">
+    <meta name="keywords" content="autoescuela, clases de conducir, permiso B, carnet, conducción, teórica, práctica">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/sedes.css">
+    <link rel="stylesheet" href="styles/sections/index.css">
+
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header/Navbar -->
+    <header class="header" id="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <img src="images/logotellado.webp" alt="Autoescuela Tellado" class="logo-img">
+                    <span class="logo-text">Autoescuela<span class="logo-highlight"> Tellado</span></span>
+                </a>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li class="nav-item"><a href="#sedes" class="nav-link">Nuestras Sedes</a></li>
+                    <li class="nav-item"><a href="pages/sobre-nosotros.html" class="nav-link">Sobre Nosotros</a></li>
+                    <li class="nav-item"><a href="pages/cursos.html" class="nav-link">Cursos</a></li>
+                    <li class="nav-item"><a href="pages/permisos.html" class="nav-link">Permisos</a></li>
+                    <li class="nav-item"><a href="#testimonios" class="nav-link">Testimonios</a></li>
+                    <li class="nav-item">
+                        <a href="#contacto" class="btn btn-primary btn-sm">
+                            <i class="fas fa-phone"></i> Contáctanos
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección Hero -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Obtén tu carnet de conducir <span class="highlight">rápido y seguro</span></h1>
+                <div class="hero-cta">
+                    <a href="#contacto" class="btn btn-primary btn-lg">
+                        <i class="fas fa-calendar-check"></i> Contáctanos para tu primera clase
+                    </a>
+                    <a href="#sedes" class="btn btn-secondary btn-lg">
+                        <i class="fas fa-map-marker-alt"></i> Encuentra tu sede
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/heroimage.png" alt="Clase de conducción profesional">
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Sección Servicios -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Tipos de Permisos</h2>
+                <p class="section-subtitle">Ofrecemos una formación completa adaptada a tus necesidades</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="service-title">Permiso B (Coche)</h3>
+                    <p class="service-description">Clases teóricas y prácticas para obtener el permiso de conducir B. Incluye preparación para el examen.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Clases en vehículos modernos</li>
+                        <li><i class="fas fa-check"></i> Instructores certificados</li>
+                        <li><i class="fas fa-check"></i> Horarios flexibles</li>
+                    </ul>
+                    <a href="pages/permisos.html" class="btn btn-outline">Más información</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <h3 class="service-title">Permiso A (Moto)</h3>
+                    <p class="service-description">Formación completa para todos los permisos de moto. Clases en circuito y en carretera.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Motos de última generación</li>
+                        <li><i class="fas fa-check"></i> Equipo de protección incluido</li>
+                        <li><i class="fas fa-check"></i> Circuito propio</li>
+                    </ul>
+                    <a href="pages/permisos.html" class="btn btn-outline">Más información</a>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="service-title">Recuperación de Puntos</h3>
+                    <p class="service-description">Clases para conductores con puntos perdidos que quieren recuperarlos o mejorar su conducción.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Clases personalizadas</li>
+                        <li><i class="fas fa-check"></i> Instructores especializados</li>
+                        <li><i class="fas fa-check"></i> Plan de recuperación de puntos</li>
+                    </ul>
+                    <a href="pages/permisos.html" class="btn btn-outline">Más información</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Cursos Destacados -->
+    <section class="courses" id="cursos">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Cursos Destacados</h2>
+                <p class="section-subtitle">Elige el curso que mejor se adapte a tus necesidades</p>
+            </div>
+            
+            <div class="courses-grid">
+                <div class="course-card">
+                    <div class="course-badge">Más Popular</div>
+                    <div class="course-header">
+                        <h3 class="course-title">Curso Intensivo</h3>
+                        <div class="course-price">
+                            <span class="price">Consultar disponibilidad</span>
+                            <span class="price-note">Pago único</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p class="course-description">Ideal para quienes quieren obtener el permiso lo antes posible.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> 20 horas de prácticas</li>
+                            <li><i class="fas fa-check"></i> Clases teóricas ilimitadas</li>
+                            <li><i class="fas fa-check"></i> Simuladores de examen</li>
+                            <li><i class="fas fa-check"></i> Tasas de examen incluidas</li>
+                            <li><i class="fas fa-check"></i> Material didáctico completo</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#contacto" class="btn btn-primary btn-block">Inscribirme ahora</a>
+                    </div>
+                </div>
+                
+                <div class="course-card featured">
+                    <div class="course-badge">Recomendado</div>
+                    <div class="course-header">
+                        <h3 class="course-title">Curso Estándar</h3>
+                        <div class="course-price">
+                            <span class="price">Consultar Precio</span>
+                            <span class="price-note">+ tasas de examen</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p class="course-description">La opción más equilibrada para obtener tu permiso de conducir.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> 15 horas de prácticas</li>
+                            <li><i class="fas fa-check"></i> Clases teóricas presenciales</li>
+                            <li><i class="fas fa-check"></i> Acceso a plataforma online</li>
+                            <li><i class="fas fa-check"></i> 2 simulacros de examen</li>
+                            <li><i class="fas fa-check"></i> Libro de teoría incluido</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#contacto" class="btn btn-primary btn-block">Inscribirme ahora</a>
+                    </div>
+                </div>
+                
+                <div class="course-card">
+                    <div class="course-header">
+                        <h3 class="course-title">Solo Prácticas</h3>
+                        <div class="course-price">
+                            <span class="price">Consultar Precio</span>
+                            <span class="price-note">por hora</span>
+                        </div>
+                    </div>
+                    <div class="course-content">
+                        <p class="course-description">Para quienes solo necesitan clases prácticas o refuerzo.</p>
+                        <ul class="course-features">
+                            <li><i class="fas fa-check"></i> Horas sueltas de práctica</li>
+                            <li><i class="fas fa-check"></i> Flexibilidad horaria</li>
+                            <li><i class="fas fa-check"></i> Vehículo moderno</li>
+                            <li><i class="fas fa-check"></i> Instructor especializado</li>
+                            <li><i class="fas fa-check"></i> Recogida a domicilio</li>
+                        </ul>
+                    </div>
+                    <div class="course-footer">
+                        <a href="#contacto" class="btn btn-primary btn-block">Solicitar horas</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Testimonios -->
+    <section class="testimonials" id="testimonios">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Opiniones de Nuestros Alumnos</h2>
+                <p class="section-subtitle">Más de 2000 alumnos confían en nosotros</p>
+            </div>
+            
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Excelente autoescuela. Los instructores son muy profesionales y pacientes. Aprobé a la primera gracias a su metodología."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">María González</h4>
+                            <p class="author-course">Permiso B - Abril 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">"Después de suspender dos veces en otra autoescuela, vine aquí y en dos meses ya tenía mi carnet. Muy recomendable."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Carlos Ruiz</h4>
+                            <p class="author-course">Permiso A - Febrero 2023</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"Las clases de perfeccionamiento me ayudaron a ganar confianza después de 10 años sin conducir. Muy profesionales."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
+                        <div class="author-info">
+                            <h4 class="author-name">Laura Méndez</h4>
+                            <p class="author-course">Reciclaje - Enero 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Sedes -->
+    <section class="locations-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestras Sedes</h2>
+                <p class="section-subtitle">Encuéntranos en tres ubicaciones estratégicas de Madrid</p>
+            </div>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3 class="location-title">Sede Cala de Finestrat</h3>
+                    </div>
+                    <div class="location-content">
+                        <div class="location-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><strong>Av. de Finestrat, 11, 13</strong></p>
+                                <p>03509 Benidorm, Alicante</p>
+                            </div>
+                        </div>
+                        <div class="location-contact">
+                            <p><i class="fas fa-phone"></i> <a href="tel:+34123456789">+34 634 79 28 63</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:telladoautoescuelas@hotmail.com">telladoautoescuelas@hotmail.com</a></p>
+                        </div>
+                        <div class="location-hours">
+                            <h4>Horario:</h4>
+                            <p>Lunes - Viernes: 10:00 - 16:00 | 14:00 - 20:00</p>
+                            <p>Sábados: Cerrado</p>
+                            <p>Domingos: Cerrado</p>
+                            <br>
+                        </div>
+                        <div class="location-features">
+                            <h4>Servicios:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Todos los permisos</li>
+                                <li><i class="fas fa-check"></i> Clases teóricas</li>
+                                <li><i class="fas fa-check"></i> Exámenes prácticos</li>
+                                <li><i class="fas fa-check"></i> Gestión de trámites</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3 class="location-title">Sede Villajoyosa</h3>
+                    </div>
+                    <div class="location-content">
+                        <div class="location-address">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <p><strong>Carrer Cervantes, 49</strong></p>
+                                <p>03570 La Vila Joiosa, Alicante</p>
+                            </div>
+                        </div>
+                        <div class="location-contact">
+                            <p><i class="fas fa-phone"></i> <a href="tel:+34123456787">+34 682 29 00 92</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:telladoautoescuelas@hotmail.com">telladoautoescuelas@hotmail.com</a></p>
+                        </div>
+                        <div class="location-hours">
+                            <h4>Horario:</h4>
+                            <p>Lunes - Viernes: 10:00 - 16:00 | 14:00 - 20:00</p>
+                            <p>Sábados: Cerrado</p>
+                            <p>Domingos: Cerrado</p>
+                            <br>
+                        </div>
+                        <div class="location-features">
+                            <h4>Servicios:</h4>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Todos los permisos</li>
+                                <li><i class="fas fa-check"></i> Clases teóricas</li>
+                                <li><i class="fas fa-check"></i> Exámenes prácticos</li>
+                                <li><i class="fas fa-check"></i> Gestión de trámites</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Sección de Sedes/Maps -->
+    <section class="map-section" id="sedes">
+        <div class="container">
+            <h2 class="section-title">Donde <span class="text-highlight">Encontrarnos</span></h2>
+            <p class="section-subtitle">Encuentra la autoescuela más cercana a tu ubicación</p>
+            
+            <div class="map-container">
+                <div class="locations-sidebar">
+                    <h3><i class="fas fa-map-marker-alt"></i> Nuestras Autoescuelas</h3>
+                    <p>Haz clic en una sede para verla en el mapa</p>
+                    
+                    <div class="locations-list">
+                        <div class="location-item active" data-location="0">
+                            <div class="location-info">
+                                <h4><i class="fas fa-car"></i> Tellado Finestrat</h4>
+                                <p><i class="fas fa-map-pin"></i> Av. de Finestrat, 11, 13, 03509 Benidorm, Alicante</p>
+                                <p><i class="fas fa-phone"></i> +34 634 79 28 63</p>
+                                <p><i class="fas fa-clock"></i> L-V: 10:00-14:00, 16:00-20:00</p>
+                            </div>
+                            <button class="btn-location-select">Ver en mapa</button>
+                        </div>
+                        
+                        <div class="location-item" data-location="1">
+                            <div class="location-info">
+                                <h4><i class="fas fa-motorcycle"></i> Tellado Villajoyosa</h4>
+                                <p><i class="fas fa-map-pin"></i> Carrer Cervantes, 49, 03570 La Vila Joiosa, Alicante</p>
+                                <p><i class="fas fa-phone"></i> +34 682 29 00 92</p>
+                                <p><i class="fas fa-clock"></i> L-V: 10:00-14:00, 16:00-20:00</p>
+                            </div>
+                            <button class="btn-location-select">Ver en mapa</button>
+                        </div>
+                    </div>
+                    
+                    <div class="map-legend">
+                        <h4><i class="fas fa-info-circle"></i> Leyenda</h4>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #e74c3c;"></span>
+                            <span>Sede principal</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #3498db;"></span>
+                            <span>Sede secundaria</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="legend-color" style="background-color: #2ecc71;"></span>
+                            <span>Centro de prácticas</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="map-wrapper">
+                    <div id="autoescuelaMap"></div>
+                    <div class="map-controls">
+                        <button id="btn-locate-me" class="btn-map-control">
+                            <i class="fas fa-location-arrow"></i> Mi ubicación
+                        </button>
+                        <button id="btn-reset-view" class="btn-map-control">
+                            <i class="fas fa-sync-alt"></i> Vista general
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Sección Contacto -->
+    <section class="contact" id="contacto">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contacta con Nosotros</h2>
+                <p class="section-subtitle">Estamos aquí para ayudarte a conseguir tu permiso de conducir</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">Nuestras Sedes</h3>
+                            <p class="contact-text">Visita nuestras sedes en Benidorm y La Vila Joiosa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">Teléfonos</h3>
+                            <p class="contact-text">
+                                <a href="tel:+34634792863">+34 634 79 28 63</a><br>Tellado Finestrat
+                                <br><a href="tel:+34682290092">+34 682 29 00 92</a><br>Tellado Villajoyosa
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">Email</h3>
+                            <p class="contact-text">
+                                <a href="mailto:telladoautoescuelas@hotmail.com">telladoautoescuelas@hotmail.com</a><br>
+                                Respondemos en menos de 24h
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3 class="contact-title">Horario</h3>
+                            <p class="contact-text">
+                                Lunes - Viernes: 10:00 - 14:00, 16:00 - 20:00<br>
+                                Sábados y Domingos: Cerrado
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nombre completo *</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email *</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Teléfono *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="course" class="form-label">Curso de interés</label>
+                            <select id="course" name="course" class="form-control">
+                                <option value="">Selecciona un curso</option>
+                                <option value="permiso-b">Permiso B (Coche)</option>
+                                <option value="permiso-a">Permiso A (Moto)</option>
+                                <option value="intensivo">Curso Intensivo</option>
+                                <option value="estandar">Curso Estándar</option>
+                                <option value="practicas">Solo Prácticas</option>
+                                <option value="reciclaje">Reciclaje/Perfeccionamiento</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Mensaje</label>
+                            <textarea id="message" name="message" class="form-control" rows="4" placeholder="¿Tienes alguna pregunta específica?"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="privacy" name="privacy" required>
+                            <label for="privacy">Acepto la política de privacidad *</label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">
+                            <i class="fas fa-paper-plane"></i> Enviar solicitud
+                        </button>
+                        
+                        <div class="form-note">
+                            <p>* Campos obligatorios. Te contactaremos en menos de 24 horas.</p>
+                        </div>
+                    </form>
+                </div>
+                <br>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="images/logotellado.webp" alt="Autoescuela Tellado" class="logo-img">
+                        <span class="logo-text">Autoescuela<span class="logo-highlight">Tellado</span></span>
+                    </a>
+                    <p class="footer-description">Más de 20 años formando conductores responsables con la mejor metodología y los instructores más cualificados.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sedes">Nuestras Sedes</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#cursos">Cursos</a></li>
+                        <li><a href="#testimonios">Testimonios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="pages/cursos.html">Todos los cursos</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Contacto</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Carrer Cervantes, 49, 03570 La Vila Joiosa, Alicante, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Av. de Finestrat, 11, 13, 03509 Benidorm, Alicante, España</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="">+34 634 79 28 63<br>Tellado Finestrat</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span><a href="">+34 682 29 00 92<br>Tellado Villajoyosa</a></span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span><a href="mailto:telladoautoescuelas@hotmail.com">telladoautoescuelas@hotmail.com</a></span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Horario</h3>
+                    <ul class="footer-hours">
+                        <li>
+                            <span>Lunes - Viernes</span>
+                            <span>10:00 - 14:00</span>
+                            <span>16:00 - 20:00</span>
+                        </li>
+                        <li>
+                            <span>Sábados</span>
+                            <span>Cerrado</span>
+                        </li>
+                        <li>
+                            <span>Domingos</span>
+                            <span>Cerrado</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+           <div class="footer-bottom">
+    <div class="footer-copyright">
+        <p>&copy; 2026 Autoescuela Tellado. Todos los derechos reservados. Página Web Desarrollada por Isaac Abarca Dudlo</p>
+    </div>
+    <div class="footer-legal">
+        <a href="pages/politica-de-privacidad.html">Política de Privacidad</a>
+        <a href="pages/aviso-legal.html">Aviso Legal</a>
+        <a href="pages/politica-de-cookies.html">Política de Cookies</a>
+        <!-- Añade este enlace para gestionar cookies si quieres -->
+        <a href="#" id="manage-cookies-footer" style="display: none;">⚙️ Gestionar Cookies</a>
+    </div>
+</div>
+        </div>
+        
+        <!-- Botón flotante WhatsApp -->
+        <a href="https://wa.me/34634792863?text=Hola,%20me%20interesa%20información%20sobre%20los%20cursos%20de%20conducción" class="whatsapp-float" target="_blank" aria-label="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </footer>
+
+    
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin="">
+        
+        
+        // Listener para eventos de cookies
+        document.addEventListener('cookieConsentUpdated', function(e) {
+            console.log('🍪 Consentimiento actualizado:', e.detail);
+            
+            // Aquí puedes ejecutar lógica adicional según el consentimiento
+            if (e.detail.analytics) {
+                console.log('📊 Analytics habilitado');
+            }
+            
+            if (e.detail.marketing) {
+                console.log('📢 Marketing habilitado');
+            }
+        });
+        </script>
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/cookies.js"></script>
+</body>
+</html>

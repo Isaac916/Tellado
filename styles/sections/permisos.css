@@ -1,0 +1,741 @@
+/* permisos.css - Estilos específicos para la página Permisos */
+
+/* Variables específicas para esta página */
+:root {
+    --license-bg: #ffffff;
+    --license-border: #e0e0e0;
+    --vehicle-bg: #f8fafc;
+    --tab-active: var(--primary-color);
+    --tab-inactive: #94a3b8;
+}
+
+/* Hero Section específico */
+
+
+.licenses-hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 120px 0 80px;
+    position: relative;
+    overflow: hidden;
+}
+
+.licenses-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" opacity="0.1"><path d="M0 0h1200v600H0z" fill="none"/><path d="M0 300c150-100 300-200 450-100s300 200 450 200 300-100 450-200 300 100 450 200l150 100V600H0z" fill="white"/></svg>');
+    background-size: cover;
+    background-position: center;
+}
+.page-hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.page-hero-title {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--spacing-md);
+}
+
+.page-hero-title .highlight {
+    color: var(--accent-color);
+}
+
+.page-hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.page-hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Sección de Permisos */
+.licenses-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--light-color);
+}
+
+.licenses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.license-card {
+    background-color: var(--license-bg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--license-border);
+}
+
+.license-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.license-card.featured {
+    border: 2px solid var(--primary-color);
+    position: relative;
+}
+
+.license-badge {
+    position: absolute;
+    top: 20px;
+    right: -30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 8px 40px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+.page-hero-cta {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.license-icon {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: white;
+    padding: var(--spacing-xl);
+    text-align: center;
+    font-size: 3rem;
+}
+
+.license-content {
+    padding: var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.license-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--dark-color);
+}
+
+.license-subtitle {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+}
+
+.license-description {
+    color: var(--gray-color);
+    margin-bottom: var(--spacing-lg);
+    line-height: 1.6;
+}
+
+.license-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 1px solid var(--gray-light);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.info-item i {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+}
+
+.info-label {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--gray-color);
+    margin-bottom: 0.2rem;
+}
+
+.info-value {
+    display: block;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.license-includes {
+    margin-top: var(--spacing-md);
+}
+
+.license-includes h4 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+.license-includes ul {
+    list-style: none;
+}
+
+.license-includes li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+.license-includes i {
+    color: var(--success-color);
+    font-size: 0.8rem;
+}
+
+.license-footer {
+    padding: var(--spacing-lg);
+    border-top: 1px solid var(--gray-light);
+    background-color: var(--light-color);
+}
+
+/* Sección de Vehículos */
+.vehicles-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: white;
+}
+
+.vehicles-tabs {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: var(--spacing-md) var(--spacing-xl);
+    background-color: white;
+    border: 2px solid var(--tab-inactive);
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--tab-inactive);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.tab-btn:hover {
+    border-color: var(--tab-active);
+    color: var(--tab-active);
+}
+
+.tab-btn.active {
+    background-color: var(--tab-active);
+    border-color: var(--tab-active);
+    color: white;
+}
+
+.tabs-content {
+    background-color: var(--vehicle-bg);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-lg);
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.vehicles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.vehicle-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.vehicle-image-wrapper {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.vehicle-image {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-vehiculo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.vehicle-image i {
+    color: white;
+    font-size: 4rem;
+}
+
+.matricula {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 2;
+}
+
+.vehicle-content {
+    padding: var(--spacing-lg);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.vehicle-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-md);
+    color: var(--dark-color);
+}
+
+/* Especificaciones DEBAJO de la imagen (arreglado) */
+.vehicle-specs {
+    display: flex;
+    gap: var(--spacing-md);
+    margin: var(--spacing-md) 0;
+    flex-wrap: wrap;
+    position: static; /* Elimina posición absoluta si existía */
+}
+
+.spec-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    background-color: var(--light-color);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius-sm);
+    font-size: 0.9rem;
+    color: var(--gray-color);
+    flex: 1;
+    min-width: 120px;
+    justify-content: center;
+}
+
+.spec-item i {
+    color: var(--primary-color);
+    min-width: 16px;
+}
+
+.vehicle-description {
+    color: var(--gray-color);
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+    flex: 1;
+}
+
+.vehicle-features {
+    border-top: 1px solid var(--gray-light);
+    padding-top: var(--spacing-md);
+    margin-top: auto;
+}
+
+.vehicle-features h4 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+.vehicle-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.vehicle-features li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--gray-color);
+}
+
+.vehicle-features i {
+    color: var(--success-color);
+    font-size: 0.8rem;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+    
+    .vehicle-specs {
+        gap: var(--spacing-sm);
+    }
+    
+    .spec-item {
+        min-width: calc(50% - var(--spacing-sm));
+        flex: none;
+    }
+    
+    .tab-btn {
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vehicle-image-wrapper {
+        height: 180px;
+    }
+    
+    .spec-item {
+        min-width: 100%;
+    }
+}
+/* Sección de Requisitos */
+.requirements-section {
+    padding: var(--spacing-xxl) 0;
+    background-color: var(--light-color);
+}
+
+.requirements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.requirement-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.requirement-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.requirement-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(37, 99, 235, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--spacing-md);
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+
+.requirement-title {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--dark-color);
+}
+
+.requirement-description {
+    color: var(--gray-color);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+/* Sección CTA */
+.cta-section {
+    padding: var(--spacing-xxl) 0;
+    background: linear-gradient(135deg, var(--secondary-color) 0%, #0da271 100%);
+    color: white;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .licenses-grid,
+    .vehicles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 992px) {
+    .licenses-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    .requirements-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 100px 0 60px;
+    }
+    
+    .page-hero-title {
+        font-size: 2.2rem;
+    }
+    
+    .page-hero-cta,
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .licenses-grid,
+    .vehicles-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .license-info {
+        grid-template-columns: 1fr;
+    }
+    
+    .tabs-header {
+        flex-direction: column;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .requirements-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .page-hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .page-hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .license-card {
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .vehicle-card {
+        margin: 0 var(--spacing-sm);
+    }
+    
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+.license-badge.always-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.vehicle-real-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+
+.matricula {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+/* Filtro de Permisos */
+.licenses-filter {
+    margin-bottom: var(--spacing-xl);
+}
+
+.filter-header {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background-color: white;
+    border: 2px solid var(--tab-inactive);
+    border-radius: var(--border-radius);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--tab-inactive);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    border-color: var(--tab-active);
+    color: var(--tab-active);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background-color: var(--tab-active);
+    border-color: var(--tab-active);
+    color: white;
+}
+
+/* Transición para las tarjetas al filtrar */
+.license-card {
+    transition: all 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.license-card.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    border: none;
+    /* Añade estas propiedades: */
+    display: none; /* <- Esto lo quita del layout */
+    /* O si quieres una transición más suave: */
+    /* position: absolute; */
+    /* width: 0; */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .filter-header {
+        gap: var(--spacing-xs);
+    }
+    
+    .filter-btn {
+        padding: var(--spacing-xs) var(--spacing-md);
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .filter-btn {
+        width: 200px;
+        justify-content: center;
+    }
+}
