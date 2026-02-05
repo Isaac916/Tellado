@@ -559,164 +559,224 @@
 </section>
 
     <!-- Sección de Vehículos -->
-    <section class="vehicles-section" id="vehiculos">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nuestra Flota de Vehículos</h2>
-                <p class="section-subtitle">Vehículos modernos separados por modalidad: manual y automático</p>
+<section class="vehicles-section" id="vehiculos">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Nuestra Flota de Vehículos</h2>
+            <p class="section-subtitle">Vehículos modernos separados por modalidad: manual y automático</p>
+        </div>
+        
+        <div class="vehicles-tabs">
+            <div class="tabs-header">
+                <button class="tab-btn active" data-tab="manual">
+                    <i class="fas fa-cogs"></i> Manuales
+                </button>
+                <button class="tab-btn" data-tab="automatico">
+                    <i class="fas fa-bolt"></i> Automáticos
+                </button>
+                <button class="tab-btn" data-tab="motos">
+                    <i class="fas fa-motorcycle"></i> Motos
+                </button>
             </div>
             
-            <div class="vehicles-tabs">
-                <div class="tabs-header">
-                    <button class="tab-btn active" data-tab="manual">
-                        <i class="fas fa-cogs"></i> Manuales
-                    </button>
-                    <button class="tab-btn" data-tab="automatico">
-                        <i class="fas fa-bolt"></i> Automáticos
-                    </button>
-                    <button class="tab-btn" data-tab="motos">
-                        <i class="fas fa-motorcycle"></i> Motos
-                    </button>
+            <div class="tabs-content">
+                <!-- Pestaña Manual -->
+                <div class="tab-pane active" id="manual">
+                    <div class="vehicles-grid">
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/VolkswagenGolfMk7.webp" alt="Volkswagen Golf Mk7">
+                            </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Volkswagen Golf (Generación Mk7)</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Gasolina</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Manual 6v</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2017</span>
+                                    </div>
+                                </div>
+                                <p class="vehicle-description">Motor diésel de gran respuesta en bajas revoluciones. Incluye sensores de aparcamiento y sistema de ayuda de salida en pendiente (Auto-Hold).</p>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- NUEVO: Renault Mégane -->
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/renaultMegane.jpg" alt="Renault Mégane">
+                            </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Renault Mégane</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Diésel</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Manual 6v</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2020</span>
+                                    </div>
+                                </div>
+                                <p class="vehicle-description">Compacto familiar con excelente visibilidad. Equipado con cámara de visión trasera y asistentes de conducción para mayor seguridad.</p>
+                            </div>
+                        </div>
+                        
+                        <!-- NUEVO: Mercedes-Benz Clase A (Ajusta modelo según tengas) -->
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/mercedesBenz.jpeg" alt="Mercedes-Benz">
+                            </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Mercedes-Benz Clase A</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Gasolina</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Manual 6v</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2021</span>
+                                    </div>
+                                </div>
+                                <p class="vehicle-description">Premium compacto con interior de alta calidad. Incluye pantalla digital, asistentes de conducción y excelente confort para la formación.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <div class="tabs-content">
-                    <!-- Pestaña Manual -->
-                    <div class="tab-pane active" id="manual">
-                        <div class="vehicles-grid">
-                            <div class="vehicle-card">
-                                <div class="vehicle-image">
-                                    <image class="foto-vehiculo" src="../images/vehiculos/VolkswagenGolfMk7.webp" alt="Volkswagen Golf Mk7">
-                                </div>
-                                <div class="vehicle-content">
-                                    <h3 class="vehicle-title">Volkswagen Golf (Generación Mk7)</h3>
-                                    <div class="vehicle-specs">
-                                        <div class="spec-item">
-                                            <i class="fas fa-gas-pump"></i>
-                                            <span>Gasolina</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-cogs"></i>
-                                            <span>Manual 6v</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>2017</span>
-                                        </div>
-                                    </div>
-                                    <p class="vehicle-description">Motor diésel de gran respuesta en bajas revoluciones. Incluye sensores de aparcamiento y sistema de ayuda de salida en pendiente (Auto-Hold).</p>
-                                </div>
+                <!-- Pestaña Automático -->
+                <div class="tab-pane" id="automatico">
+                    <div class="vehicles-grid">
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/VolkswagenT-Roc.jpg" alt="Volkswagen T-Roc">
                             </div>
-                            
-                            <div class="vehicle-card">
-                                <div class="vehicle-image">
-                                    <image class="foto-vehiculo" src="../images/vehiculos/NissanMicraK13.jpg" alt="Nissan Micra K13">
-                                </div>
-                                <div class="vehicle-content">
-                                    <h3 class="vehicle-title">Nissan Micra (Generación K13)</h3>
-                                    <div class="vehicle-specs">
-                                        <div class="spec-item">
-                                            <i class="fas fa-gas-pump"></i>
-                                            <span>Gasolina</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-cogs"></i>
-                                            <span>Manual 5v</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>2017</span>
-                                        </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Volkswagen T-Roc</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Diésel</span>
                                     </div>
-                                    <p class="vehicle-description">Utilitario compacto con radio de giro ultra reducido. Equipado con dirección asistida eléctrica para facilitar maniobras de estacionamiento.</p>
+                                    <div class="spec-item">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>Automático DSG</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2023</span>
+                                    </div>
                                 </div>
+                                <p class="vehicle-description">SUV con posición de conducción elevada. Con asistente de mantenimiento de carril y frenado automático de emergencia.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/NissanMicraK13.jpg" alt="Nissan Micra K13">
+                            </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Nissan Micra (Generación K13)</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-gas-pump"></i>
+                                        <span>Gasolina</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cogs"></i>
+                                        <span>Automático</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2017</span>
+                                    </div>
+                                </div>
+                                <p class="vehicle-description">Utilitario compacto con radio de giro ultra reducido. Equipado con dirección asistida eléctrica para facilitar maniobras de estacionamiento.</p>
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- Pestaña Automático -->
-                    <div class="tab-pane" id="automatico">
-                        <div class="vehicles-grid">
-                            <div class="vehicle-card">
-                                <div class="vehicle-image">
-                                    <image class="foto-vehiculo" src="../images/vehiculos/VolkswagenT-Roc.jpg" alt="Volkswagen T-Roc">
-                                </div>
-                                <div class="vehicle-content">
-                                    <h3 class="vehicle-title">Volkswagen T-Roc</h3>
-                                    <div class="vehicle-specs">
-                                        <div class="spec-item">
-                                            <i class="fas fa-gas-pump"></i>
-                                            <span>Diésel</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-bolt"></i>
-                                            <span>Automático DSG</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>2023</span>
-                                        </div>
+                </div>
+                
+                <!-- Pestaña Motos -->
+                <div class="tab-pane" id="motos">
+                    <div class="vehicles-grid">
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/HondaCB500F.jpg" alt="Honda CB500F"></image>
+                            </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Honda CB500F</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        <span>471 cc</span> <!-- CORREGIDO: 471cc no 124cc -->
                                     </div>
-                                    <p class="vehicle-description">SUV con posición de conducción elevada. Con asistente de mantenimiento de carril y frenado automático de emergencia.</p>
+                                    <div class="spec-item">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>47 CV (35 kW)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cogs"></i> <!-- CAMBIADO: de bolt a cogs -->
+                                        <span>Manual 6v</span> <!-- AÑADIDO: tipo transmisión -->
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2018</span>
+                                    </div>
                                 </div>
+                                <p class="vehicle-description">Moto tipo "Naked" apta para el carnet A2. Equipada con frenos ABS de doble canal y embrague asistido antirrebote. Transmisión manual de 6 velocidades.</p>
                             </div>
                         </div>
-                    </div>
-                    
-                    <!-- Pestaña Motos -->
-                    <div class="tab-pane" id="motos">
-                        <div class="vehicles-grid">
-                            <div class="vehicle-card">
-                                <div class="vehicle-image">
-                                    <image class="foto-vehiculo" src="../images/vehiculos/HondaCB500F.jpg" alt="Honda CB500F"></image>
-                                </div>
-                                <div class="vehicle-content">
-                                    <h3 class="vehicle-title">Honda CB500F</h3>
-                                    <div class="vehicle-specs">
-                                        <div class="spec-item">
-                                            <i class="fas fa-tachometer-alt"></i>
-                                            <span>124 cc</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-bolt"></i>
-                                            <span>47 CV (35 kW)</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>2018</span>
-                                        </div>
-                                    </div>
-                                    <p class="vehicle-description">Moto tipo "Naked" apta para el carnet A2. Equipada con frenos ABS de doble canal y embrague asistido antirrebote.</p>
-                                </div>
+                         
+                        <div class="vehicle-card">
+                            <div class="vehicle-image">
+                                <image class="foto-vehiculo" src="../images/vehiculos/YamahaMT-07.jpg" alt="Yamaha MT-07"></image>
                             </div>
-                             <div class="vehicle-card">
-                                <div class="vehicle-image">
-                                    <image class="foto-vehiculo" src="../images/vehiculos/YamahaMT-07.jpg" alt="Yamaha MT-07"></image>
-                                </div>
-                                <div class="vehicle-content">
-                                    <h3 class="vehicle-title">Yamaha MT-07</h3>
-                                    <div class="vehicle-specs">
-                                        <div class="spec-item">
-                                            <i class="fas fa-tachometer-alt"></i>
-                                            <span>124 cc</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-bolt"></i>
-                                            <span>74 CV (54 kW)</span>
-                                        </div>
-                                        <div class="spec-item">
-                                            <i class="fas fa-calendar-alt"></i>
-                                            <span>2021</span>
-                                        </div>
+                            <div class="vehicle-content">
+                                <h3 class="vehicle-title">Yamaha MT-07</h3>
+                                <div class="vehicle-specs">
+                                    <div class="spec-item">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        <span>689 cc</span> <!-- CORREGIDO: 689cc no 124cc -->
                                     </div>
-                                    <p class="vehicle-description">Es ideal para aprender el manejo de una moto de "tamaño real" debido a su entrega de potencia progresiva y su chasis compacto que facilita las maniobras.</p>
+                                    <div class="spec-item">
+                                        <i class="fas fa-bolt"></i>
+                                        <span>74 CV (54 kW)</span>
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-cogs"></i> <!-- CAMBIADO: de bolt a cogs -->
+                                        <span>Manual 6v</span> <!-- AÑADIDO: tipo transmisión -->
+                                    </div>
+                                    <div class="spec-item">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        <span>2021</span>
+                                    </div>
                                 </div>
+                                <p class="vehicle-description">Es ideal para aprender el manejo de una moto de "tamaño real" debido a su entrega de potencia progresiva y su chasis compacto que facilita las maniobras. Transmisión manual de 6 velocidades.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Sección de Servicios Adicionales -->
     <section class="additional-services">
