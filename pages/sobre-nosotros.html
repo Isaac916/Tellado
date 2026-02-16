@@ -8,6 +8,7 @@
     <meta name="keywords" content="autoescuela Tellado, historia, equipo, valores, experiencia, instructores profesionales">
     <link rel="stylesheet" href="../styles/sections/sobre-nosotros.css">
     <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/components/carrusell.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -258,94 +259,155 @@
     </section>
 
     <!-- Instalaciones -->
-    <section class="facilities-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Nuestras Instalaciones</h2>
-                <p class="section-subtitle">Espacios diseñados para el aprendizaje óptimo</p>
+  <section class="facilities-section">
+    <div class="container">
+        <h2 class="section-title">Nuestras <span class="highlight">Instalaciones</span></h2>
+        
+        <!-- CONTENEDOR DE LOS 3 CARRUSELES EN HORIZONTAL -->
+        <div class="carruseles-grid">
+            
+            <!-- CARRUSEL 1 - FLOTA MODERNA -->
+            <div class="carousel-category">
+                <h3 class="category-title">
+                    <i class="fas fa-car"></i> Flota Moderna
+                </h3>
+                <div class="carousel-modern" data-category="flota">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/vehiculos/mercedesBenz.jpeg" alt="Mercedes Benz" class="carousel-image">
+                                    <div class="image-caption">Mercedes Benz - Confort y tecnología</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/vehiculos/HondaCB500F.jpg" alt="Honda CB500F" class="carousel-image">
+                                    <div class="image-caption">Honda CB500F - Ágil y eficiente</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/vehiculos/VolkswagenGolfMk7.webp" alt="Volkswagen Golf Mk7" class="carousel-image">
+                                    <div class="image-caption">Volkswagen Golf Mk7 - Robustez y confort</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/vehiculos/YamahaMT-07.jpg" alt="Yamaha MT-07" class="carousel-image">
+                                    <div class="image-caption">Yamaha MT-07 - Versatilidad</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" data-category="flota">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-category="flota">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-indicators" data-category="flota">
+                        <button class="indicator active" data-index="0"></button>
+                        <button class="indicator" data-index="1"></button>
+                        <button class="indicator" data-index="2"></button>
+                        <button class="indicator" data-index="3"></button>
+                    </div>
+                </div>
             </div>
             
-            <div class="facilities-grid">
-                <div class="facility-card">
-                    <div class="facility-image">
-                        <i class="fas fa-chalkboard"></i>
-                    </div>
-                    <div class="facility-content">
-                        <h3 class="facility-title">Aulas Modernas</h3>
-                        <p class="facility-description">Aulas equipadas con tecnología audiovisual, wifi gratuito y capacidad para grupos reducidos.</p>
-                        <ul class="facility-features">
-                            <li><i class="fas fa-check"></i> Pantallas interactivas</li>
-                            <li><i class="fas fa-check"></i> Climatización</li>
-                            <li><i class="fas fa-check"></i> Material didáctico</li>
+            <!-- CARRUSEL 2 - AULAS MODERNAS -->
+            <div class="carousel-category">
+                <h3 class="category-title">
+                    <i class="fas fa-chalkboard-teacher"></i> Aulas Modernas
+                </h3>
+                <div class="carousel-modern" data-category="aulas">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/instalaciones/inst1.jpg" alt="Aula principal" class="carousel-image">
+                                    <div class="image-caption">Aula principal con capacidad para 20 alumnos</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/instalaciones/inst2.jpg" alt="Aula de simuladores" class="carousel-image">
+                                    <div class="image-caption">Aula de simuladores de conducción</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/instalaciones/inst3.jpg" alt="Sala de estudio" class="carousel-image">
+                                    <div class="image-caption">Sala de estudio con material didáctico</div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
-                </div>
-                
-                <div class="facility-card">
-                    <div class="facility-image">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <div class="facility-content">
-                        <h3 class="facility-title">Simuladores Avanzados</h3>
-                        <p class="facility-description">Simuladores de última generación para practicar en situaciones reales sin riesgos.</p>
-                        <ul class="facility-features">
-                            <li><i class="fas fa-check"></i> Realismo 360°</li>
-                            <li><i class="fas fa-check"></i> Diferentes condiciones</li>
-                            <li><i class="fas fa-check"></i> Análisis de conducción</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="facility-card">
-                    <div class="facility-image">
-                        <i class="fas fa-car"></i>
-                    </div>
-                    <div class="facility-content">
-                        <h3 class="facility-title">Flota Moderna</h3>
-                        <p class="facility-description">Vehículos de menos de 3 años con todas las comodidades y sistemas de seguridad.</p>
-                        <ul class="facility-features">
-                            <li><i class="fas fa-check"></i> Coches y motos nuevos</li>
-                            <li><i class="fas fa-check"></i> Dobles mandos</li>
-                            <li><i class="fas fa-check"></i> Aire acondicionado</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="facility-card">
-                    <div class="facility-image">
-                        <i class="fas fa-map-marked-alt"></i>
-                    </div>
-                    <div class="facility-content">
-                        <h3 class="facility-title">Zonas de Práctica</h3>
-                        <p class="facility-description">Circuitos cerrados y rutas urbanas diseñadas para el aprendizaje progresivo.</p>
-                        <ul class="facility-features">
-                            <li><i class="fas fa-check"></i> Circuito propio</li>
-                            <li><i class="fas fa-check"></i> Rutas examinadoras</li>
-                            <li><i class="fas fa-check"></i> Parking para prácticas</li>
-                        </ul>
+                    
+                    <button class="carousel-btn prev-btn" data-category="aulas">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-category="aulas">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-indicators" data-category="aulas">
+                        <button class="indicator active" data-index="0"></button>
+                        <button class="indicator" data-index="1"></button>
+                        <button class="indicator" data-index="2"></button>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- CTA Final -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">¿Listo para empezar tu formación con nosotros?</h2>
-                <p class="cta-subtitle">Únete a los miles de conductores que han confiado en Autoescuela Tellado.</p>
-                <div class="cta-buttons">
-                    <a href="contacto.html" class="btn btn-primary btn-lg">
-                        <i class="fas fa-calendar-check"></i> Reserva tu primera clase
-                    </a>
-                    <a href="tel:+34123456789" class="btn btn-secondary btn-lg">
-                        <i class="fas fa-phone"></i> Llámanos para más información
-                    </a>
+            
+            <!-- CARRUSEL 3 - ZONAS DE PRÁCTICA -->
+            <div class="carousel-category">
+                <h3 class="category-title">
+                    <i class="fas fa-road"></i> Zonas de Práctica
+                </h3>
+                <div class="carousel-modern" data-category="practica">
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/practica/circuito.jpg" alt="Circuito cerrado" class="carousel-image">
+                                    <div class="image-caption">Circuito cerrado para maniobras</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/practica/rutas.jpg" alt="Rutas urbanas" class="carousel-image">
+                                    <div class="image-caption">Rutas urbanas para examen</div>
+                                </div>
+                            </li>
+                            <li class="carousel-slide">
+                                <div class="carousel-image-container">
+                                    <img src="../images/practica/parking.jpg" alt="Parking de prácticas" class="carousel-image">
+                                    <div class="image-caption">Parking exclusivo para prácticas</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <button class="carousel-btn prev-btn" data-category="practica">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next-btn" data-category="practica">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                    
+                    <div class="carousel-indicators" data-category="practica">
+                        <button class="indicator active" data-index="0"></button>
+                        <button class="indicator" data-index="1"></button>
+                        <button class="indicator" data-index="2"></button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+            
+        </div> <!-- Fin carruseles-grid -->
+    </div> <!-- Fin container -->
+</section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -451,6 +513,7 @@
 
     <!-- JavaScript -->
     <script src="../js/main.js"></script>
+    <script src="../js/carrusell.js"></script>
     <script src="../js/pages.js"></script>
 </body>
 </html>

@@ -119,6 +119,7 @@ body {
 
 /* Estilos específicos para páginas legales */
 .legal-page {
+    margin-top: 50px;
     padding: 4rem 0;
 }
 

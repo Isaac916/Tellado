@@ -1,0 +1,374 @@
+/* =============================================
+   SECCIÓN DE INSTALACIONES - 3 CARRUSELES EN HORIZONTAL
+   INDICADORES FUERA DE LA IMAGEN - BOTONES MÁS PEQUEÑOS EN MÓVIL
+   ============================================= */
+
+.facilities-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+}
+
+.facilities-section .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.facilities-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.facilities-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #3b82f6, #2563eb);
+    border-radius: 2px;
+}
+
+.facilities-section .section-title .highlight {
+    color: #3b82f6;
+    position: relative;
+}
+
+/* GRID PARA LOS 3 CARRUSELES EN HORIZONTAL */
+.facilities-section .carruseles-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 2rem;
+}
+
+/* Cada categoría/carrusel */
+.facilities-section .carousel-category {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.facilities-section .carousel-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 40px -12px rgba(0, 0, 0, 0.2);
+}
+
+.facilities-section .category-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0f172a;
+    padding: 1.2rem 1.5rem;
+    margin: 0;
+    background: white;
+    border-bottom: 2px solid #eef2f6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.facilities-section .category-title i {
+    color: #3b82f6;
+    font-size: 1.4rem;
+    width: 32px;
+    text-align: center;
+}
+
+/* Estructura del carrusel */
+.facilities-section .carousel-modern {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+}
+
+.facilities-section .carousel-track-container {
+    overflow: hidden;
+    background: #0f172a;
+}
+
+.facilities-section .carousel-track {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.facilities-section .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+}
+
+/* Contenedor de imagen */
+.facilities-section .carousel-image-container {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.facilities-section .carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.facilities-section .carousel-image-container:hover .carousel-image {
+    transform: scale(1.08);
+}
+
+/* Título sobre la imagen */
+.facilities-section .image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+    color: white;
+    padding: 1.5rem 1rem 0.8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+}
+
+.facilities-section .carousel-image-container:hover .image-caption {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ===== BOTONES DE NAVEGACIÓN (FLECHAS) - TAMAÑO POR DEFECTO ===== */
+.facilities-section .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 20;
+    color: #0f172a;
+    font-size: 1.1rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    opacity: 0;
+}
+
+.facilities-section .carousel-category:hover .carousel-btn {
+    opacity: 1;
+}
+
+.facilities-section .carousel-btn:hover {
+    background: white;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    color: #3b82f6;
+}
+
+.facilities-section .prev-btn {
+    left: 10px;
+}
+
+.facilities-section .next-btn {
+    right: 10px;
+}
+
+/* Indicadores (barras de posición) */
+.facilities-section .carousel-indicators {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 10px;
+    background: white;
+    border-top: 1px solid #eef2f6;
+    z-index: 15;
+}
+
+.facilities-section .indicator {
+    width: 30px;
+    height: 4px;
+    border: none;
+    border-radius: 4px;
+    background: #cbd5e1;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+.facilities-section .indicator.active {
+    background: #3b82f6;
+    width: 45px;
+}
+
+.facilities-section .indicator:hover {
+    background: #94a3b8;
+}
+
+/* ===== VERSIÓN TABLET (2 columnas) ===== */
+@media (max-width: 992px) {
+    .facilities-section .carruseles-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .facilities-section .section-title {
+        font-size: 2.2rem;
+    }
+    
+    .facilities-section .carousel-image-container {
+        height: 220px;
+    }
+}
+
+/* ===== VERSIÓN MÓVIL - BOTONES MÁS PEQUEÑOS ===== */
+@media (max-width: 768px) {
+    .facilities-section {
+        padding: 3rem 0;
+    }
+    
+    .facilities-section .carruseles-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .facilities-section .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .facilities-section .category-title {
+        font-size: 1.3rem;
+        padding: 1rem 1.2rem;
+    }
+    
+    .facilities-section .carousel-image-container {
+        height: 200px;
+    }
+    
+    /* ===== BOTONES MUCHO MÁS PEQUEÑOS EN MÓVIL ===== */
+    .facilities-section .carousel-btn {
+        width: 32px;  /* Reducido de 40px */
+        height: 32px; /* Reducido de 40px */
+        font-size: 0.9rem; /* Reducido de 1.1rem */
+        opacity: 1; /* Siempre visibles en móvil */
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .facilities-section .prev-btn {
+        left: 8px; /* Más pegado al borde */
+    }
+    
+    .facilities-section .next-btn {
+        right: 8px; /* Más pegado al borde */
+    }
+    
+    /* Indicadores más pequeños en móvil */
+    .facilities-section .carousel-indicators {
+        padding: 12px 8px;
+        gap: 6px;
+    }
+    
+    .facilities-section .indicator {
+        width: 20px;
+        height: 3px;
+    }
+    
+    .facilities-section .indicator.active {
+        width: 30px;
+    }
+    
+    /* Texto siempre visible en móvil */
+    .facilities-section .image-caption {
+        opacity: 1;
+        visibility: visible;
+        padding: 1rem 0.8rem 0.5rem;
+        font-size: 0.9rem;
+        background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3));
+    }
+}
+
+/* ===== MÓVILES MUY PEQUEÑOS (menos de 480px) ===== */
+@media (max-width: 480px) {
+    .facilities-section .carousel-image-container {
+        height: 180px;
+    }
+    
+    /* ===== BOTONES AÚN MÁS PEQUEÑOS ===== */
+    .facilities-section .carousel-btn {
+        width: 28px;  /* Aún más pequeño */
+        height: 28px; /* Aún más pequeño */
+        font-size: 0.8rem; /* Texto más pequeño */
+    }
+    
+    .facilities-section .prev-btn {
+        left: 5px;
+    }
+    
+    .facilities-section .next-btn {
+        right: 5px;
+    }
+    
+    .facilities-section .carousel-indicators {
+        padding: 10px 6px;
+        gap: 5px;
+    }
+    
+    .facilities-section .indicator {
+        width: 15px;
+        height: 3px;
+    }
+    
+    .facilities-section .indicator.active {
+        width: 25px;
+    }
+    
+    .facilities-section .image-caption {
+        font-size: 0.8rem;
+        padding: 0.8rem 0.6rem 0.4rem;
+    }
+}
+
+/* ===== PANTALLAS GRANDES ===== */
+@media (min-width: 1400px) {
+    .facilities-section .carousel-image-container {
+        height: 280px;
+    }
+    
+    .facilities-section .category-title {
+        font-size: 1.7rem;
+        padding: 1.3rem 1.8rem;
+    }
+    
+    .facilities-section .category-title i {
+        font-size: 1.6rem;
+    }
+    
+    .facilities-section .image-caption {
+        font-size: 1.1rem;
+        padding: 1.8rem 1.2rem 0.8rem;
+    }
+}
