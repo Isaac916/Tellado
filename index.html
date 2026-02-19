@@ -285,179 +285,6 @@
         </div>
     </section>
 
-    <!-- Sección Testimonios -->
- <section class="google-reviews-section" id="testimonios">
-    <div class="container">
-        <div class="section-header">
-            <h2 class="section-title">Opiniones de Google</h2>
-            <p class="section-subtitle">TELLADO AUTOESCUELAS - Benidorm</p>
-            
-            <!-- Badge de calificación -->
-            <div class="rating-badge">
-                <div class="google-logo">
-                    <i class="fab fa-google"></i>
-                </div>
-                <div class="rating-info">
-                    <span class="rating-number">4.9</span>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <span class="reviews-total">(150+ reseñas)</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contenedor de reseñas -->
-        <div class="reviews-grid" id="reviews-container-github">
-            <div class="loading-spinner">
-                <i class="fas fa-spinner fa-spin"></i> Cargando opiniones...
-            </div>
-        </div>
-
-        <!-- Botón para ver todas en Google (ENLACE CORREGIDO) -->
-        <div class="text-center">
-            <a href="https://www.google.com/maps/place/TELLADO+AUTOESCUELAS/@38.5322813,-0.1690759,17z/data=!4m8!3m7!1s0xd621be814dcf3c7:0xe57a8b6fdb7938d0!8m2!3d38.5322813!4d-0.1690759!9m1!1b1!16s%2Fg%2F11fmxtm8tg" 
-               target="_blank" 
-               class="btn-google">
-                <i class="fab fa-google"></i> 
-                Ver todas las reseñas en Google
-            </a>
-        </div>
-    </div>
-</section>
-
-<script>
-// WIDGET OPTIMIZADO PARA GITHUB PAGES
-(function() {
-    const container = document.getElementById('reviews-container-github');
-    if (!container) return;
-
-    // Detectar si estamos en GitHub Pages
-    const isGitHubPages = window.location.hostname.includes('github.io');
-    
-    // Place ID de TELLADO AUTOESCUELAS
-    const PLACE_ID = '0xd621be814dcf3c7:0xe57a8b6fdb7938d0';
-    
-    // Usar un proxy CORS gratuito y fiable
-    const PROXY_URL = 'https://api.allorigins.win/raw?url=';
-    const API_URL = `https://maps.googleapis.com/maps/api/place/details/json?place_id=${PLACE_ID}&fields=name,rating,reviews,user_ratings_total&key=`;
-
-    // Función para cargar reseñas
-    async function loadReviews() {
-        try {
-            // En GitHub Pages, el fetch funcionará mejor
-            const response = await fetch(PROXY_URL + encodeURIComponent(API_URL));
-            const data = await response.json();
-            
-            if (data.result && data.result.reviews) {
-                displayReviews(data.result.reviews);
-            } else {
-                // Si no hay reseñas, usar fallback
-                displayFallbackReviews();
-            }
-        } catch (error) {
-            console.log('Usando reseñas de respaldo:', error);
-            displayFallbackReviews();
-        }
-    }
-
-    // Mostrar reseñas reales
-    function displayReviews(reviews) {
-        const reviewsToShow = reviews.slice(0, 4);
-        let html = '';
-        
-        reviewsToShow.forEach(review => {
-            const initials = review.author_name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
-            const date = new Date(review.time * 1000);
-            const timeAgo = getTimeAgo(date);
-            const stars = generateStars(review.rating);
-            
-            html += `
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-avatar" style="background: linear-gradient(135deg, #4285f4, #34a853);">
-                            <span>${initials}</span>
-                        </div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">${review.author_name}</h4>
-                            <div class="reviewer-rating">${stars}</div>
-                        </div>
-                        <i class="fab fa-google google-icon"></i>
-                    </div>
-                    <p class="review-text">"${review.text}"</p>
-                    <div class="review-footer">
-                        <span class="review-date">${timeAgo}</span>
-                    </div>
-                </div>
-            `;
-        });
-        
-        container.innerHTML = html;
-    }
-
-    // Fallback con reseñas realistas
-    function displayFallbackReviews() {
-        const fallback = [
-            { name: "María González", rating: 5, text: "Excelente autoescuela en Benidorm. Los instructores son muy profesionales y pacientes. Aprobé a la primera.", days: 15 },
-            { name: "Carlos Rodríguez", rating: 5, text: "Muy contento con el trato. Profesores atentos y vehículos nuevos. 100% recomendable.", days: 30 },
-            { name: "Ana Martínez", rating: 5, text: "Buenas instalaciones en Av. Finestrat. La paciencia de los instructores es lo mejor.", days: 21 },
-            { name: "Javier López", rating: 5, text: "Saqué el carnet rápido. Clases prácticas muy bien organizadas.", days: 45 }
-        ];
-        
-        let html = '';
-        fallback.forEach(fb => {
-            const initials = fb.name.split(' ').map(n => n[0]).join('');
-            html += `
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-avatar" style="background: linear-gradient(135deg, #4285f4, #34a853);">${initials}</div>
-                        <div class="reviewer-info">
-                            <h4 class="reviewer-name">${fb.name}</h4>
-                            <div class="reviewer-rating">${generateStars(fb.rating)}</div>
-                        </div>
-                        <i class="fab fa-google google-icon"></i>
-                    </div>
-                    <p class="review-text">"${fb.text}"</p>
-                    <div class="review-footer">
-                        <span class="review-date">Hace ${fb.days} días</span>
-                    </div>
-                </div>
-            `;
-        });
-        container.innerHTML = html;
-    }
-
-    // Generar estrellas
-    function generateStars(rating) {
-        let stars = '';
-        for (let i = 1; i <= 5; i++) {
-            if (i <= rating) stars += '<i class="fas fa-star" style="color: #fbbc04;"></i>';
-            else if (i - 0.5 <= rating) stars += '<i class="fas fa-star-half-alt" style="color: #fbbc04;"></i>';
-            else stars += '<i class="far fa-star" style="color: #fbbc04;"></i>';
-        }
-        return stars;
-    }
-
-    // Tiempo relativo
-    function getTimeAgo(date) {
-        const seconds = Math.floor((new Date() - date) / 1000);
-        if (seconds < 86400) return 'Hoy';
-        const days = Math.floor(seconds / 86400);
-        return `Hace ${days} día${days !== 1 ? 's' : ''}`;
-    }
-
-    // Iniciar
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', loadReviews);
-    } else {
-        loadReviews();
-    }
-})();
-</script>
 
     <!-- Sedes -->
     <section class="locations-section">
@@ -605,7 +432,185 @@
             </div>
         </div>
     </section>
+     <!-- Sección Testimonios -->
+<section class="google-reviews-section" id="testimonios">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Opiniones de Google</h2>
+            <p class="section-subtitle">TELLADO AUTOESCUELAS - Benidorm</p>
+            
+            <!-- Badge de calificación -->
+            <div class="rating-badge">
+                <div class="google-logo">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="rating-info">
+                    <span class="rating-number" id="rating-number">4.9</span>
+                    <div class="stars" id="rating-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="reviews-total" id="reviews-total">(150+ reseñas)</span>
+                </div>
+            </div>
+        </div>
 
+        <!-- Contenedor de reseñas dinámicas -->
+        <div class="reviews-grid" id="reviews-container">
+            <div class="loading-spinner">
+                <i class="fas fa-spinner fa-spin"></i> Cargando opiniones...
+            </div>
+        </div>
+
+        <!-- Botón para ver todas en Google -->
+        <div class="text-center">
+            <a href="https://www.google.com/maps/place/TELLADO+AUTOESCUELAS/@38.5322813,-0.1690759,17z/data=!4m8!3m7!1s0xd621be814dcf3c7:0xe57a8b6fdb7938d0!8m2!3d38.5322813!4d-0.1690759!9m1!1b1!16s%2Fg%2F11fmxtm8tg" 
+               target="_blank" 
+               class="btn-google">
+                <i class="fab fa-google"></i> 
+                Ver todas las reseñas en Google
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+// Script para cargar reseñas dinámicamente desde Google Places API
+(function() {
+    const container = document.getElementById('reviews-container');
+    if (!container) return;
+
+    // CONFIGURACIÓN - REEMPLAZA CON TUS DATOS
+    const PLACE_ID = 'TU_PLACE_ID_AQUI';
+    const API_KEY = 'TU_API_KEY_AQUI';
+
+    // Función para cargar reseñas
+    async function loadGoogleReviews() {
+        try {
+            // IMPORTANTE: Necesitas un backend proxy para evitar CORS
+            // Esta URL debe ser un endpoint en tu servidor
+            const response = await fetch(`/api/google-reviews?placeId=${PLACE_ID}`);
+            const data = await response.json();
+            
+            if (data.result && data.result.reviews) {
+                displayReviews(data.result);
+            } else {
+                displayFallbackReviews();
+            }
+        } catch (error) {
+            console.error('Error cargando reseñas:', error);
+            displayFallbackReviews();
+        }
+    }
+
+    // Mostrar reseñas
+    function displayReviews(placeData) {
+        // Actualizar información de calificación
+        document.getElementById('rating-number').textContent = placeData.rating || '4.9';
+        document.getElementById('reviews-total').textContent = `(${placeData.user_ratings_total || 150}+ reseñas)`;
+        
+        // Generar estrellas
+        const starsContainer = document.getElementById('rating-stars');
+        starsContainer.innerHTML = generateStars(placeData.rating || 4.9);
+        
+        // Mostrar las reseñas (máximo 5 que da la API gratuita)
+        const reviews = placeData.reviews || [];
+        const reviewsToShow = reviews.slice(0, 5); // La API gratuita da máximo 5
+        
+        let html = '';
+        reviewsToShow.forEach(review => {
+            const date = new Date(review.time * 1000);
+            const timeAgo = getTimeAgo(date);
+            
+            html += `
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar" style="background: linear-gradient(135deg, #4285f4, #34a853);">
+                            <span>${getInitials(review.author_name)}</span>
+                        </div>
+                        <div class="reviewer-info">
+                            <h4 class="reviewer-name">${review.author_name}</h4>
+                            <div class="reviewer-rating">${generateStars(review.rating)}</div>
+                        </div>
+                        <i class="fab fa-google google-icon"></i>
+                    </div>
+                    <p class="review-text">"${review.text}"</p>
+                    <div class="review-footer">
+                        <span class="review-date">${timeAgo}</span>
+                    </div>
+                </div>
+            `;
+        });
+        
+        container.innerHTML = html;
+    }
+
+    // Función auxiliar para generar estrellas
+    function generateStars(rating) {
+        let stars = '';
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) stars += '<i class="fas fa-star" style="color: #fbbc04;"></i>';
+            else if (i - 0.5 <= rating) stars += '<i class="fas fa-star-half-alt" style="color: #fbbc04;"></i>';
+            else stars += '<i class="far fa-star" style="color: #fbbc04;"></i>';
+        }
+        return stars;
+    }
+
+    // Obtener iniciales del nombre
+    function getInitials(name) {
+        return name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+    }
+
+    // Calcular tiempo relativo
+    function getTimeAgo(date) {
+        const seconds = Math.floor((new Date() - date) / 1000);
+        const days = Math.floor(seconds / 86400);
+        if (days < 1) return 'Hoy';
+        if (days < 7) return `Hace ${days} día${days !== 1 ? 's' : ''}`;
+        if (days < 30) return `Hace ${Math.floor(days/7)} semana${Math.floor(days/7) !== 1 ? 's' : ''}`;
+        return `Hace ${Math.floor(days/30)} mes${Math.floor(days/30) !== 1 ? 'es' : ''}`;
+    }
+
+    // Reseñas de respaldo en caso de error
+    function displayFallbackReviews() {
+        const fallback = [
+            { name: "Juan David Oñate Rodriguez", rating: 5, text: "Muy buena autoescuela, muy bien el personal, una maravilla el profesor Jesús...", days: 7 },
+            { name: "Pakhomov Daniel", rating: 5, text: "Me saqué el teórico y el práctico a la primera...", days: 30 },
+            { name: "Isaac Fortuna Official", rating: 5, text: "Yo me lo saqué allí y no puedo estar más agradecido...", days: 30 },
+            { name: "V Pauley", rating: 5, text: "Estoy muy contenta con esta autoescuela...", days: 90 },
+            { name: "Chiqui", rating: 5, text: "Siempre atentos a que nos preparemos bien para sacar la licencia.\nAmpliamente recomendados por sus servicios.", days: 60 },
+            { name: "Chabely Mesa Quiles", rating: 5, text: "¡Por fin he aprobado el examen de conducir! 🚗✨\nNo puedo estar más agradecida a la Autoescuela\nTellado por todo el apoyo, la paciencia y la confianza \nque me han dado desde el primer día.… ", days: 90 }
+        ];
+        
+        let html = '';
+        fallback.forEach(fb => {
+            html += `
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-avatar" style="background: linear-gradient(135deg, #4285f4, #34a853);">${getInitials(fb.name)}</div>
+                        <div class="reviewer-info">
+                            <h4 class="reviewer-name">${fb.name}</h4>
+                            <div class="reviewer-rating">${generateStars(fb.rating)}</div>
+                        </div>
+                        <i class="fab fa-google google-icon"></i>
+                    </div>
+                    <p class="review-text">"${fb.text}"</p>
+                    <div class="review-footer">
+                        <span class="review-date">Hace ${fb.days} días</span>
+                    </div>
+                </div>
+            `;
+        });
+        container.innerHTML = html;
+    }
+
+    // Iniciar carga
+    loadGoogleReviews();
+})();
+</script>
     <!-- Sección Contacto (sin cambios) -->
     <section class="contact" id="contacto">
         <div class="container">
@@ -914,5 +919,4 @@
     }
     </script>
 </body>
-
 </html>
